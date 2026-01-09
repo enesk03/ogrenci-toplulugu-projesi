@@ -1,0 +1,55 @@
+﻿.about-page {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* HERO */
+.about-hero {
+    text-align: center;
+    padding: 80px 20px;
+    border-bottom: 1px solid #222;
+}
+
+    .about-hero h1 {
+        font-size: 48px;
+        margin-bottom: 15px;
+    }
+
+    .about-hero p {
+        font-size: 18px;
+        color: #ccc;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+/* CONTENT */
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 60px 80px;
+}
+
+.about-card {
+    background-color: #111;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.3s ease;
+}
+
+    .about-card:hover {
+        transform: translateY(-5px);
+        background-color: #151515;
+    }
+
+    .about-card h2 {
+        margin-bottom: 15px;
+        font-size: 22px;
+        color: #fff;
+    }
+
+    .about-card p {
+        color: #bbb;
+        line-height: 1.6;
+    }

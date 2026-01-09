@@ -1,0 +1,307 @@
+/* =======================
+   GENEL
+======================= */
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* =======================
+   NAVBAR
+======================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #000;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.site-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+    .navbar-links a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 0.95rem;
+    }
+
+        .navbar-links a:hover {
+            color: #fff;
+        }
+
+/* =======================
+   HERO
+======================= */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+    .hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+        color: #bbb;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+/* =======================
+   MANIFESTO
+======================= */
+.manifesto {
+    max-width: 800px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+    .manifesto h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .manifesto p {
+        color: #aaa;
+        line-height: 1.8;
+    }
+
+/* =======================
+   STATS
+======================= */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    margin: 140px 0;
+    text-align: center;
+}
+
+.stat {
+    transition: transform 0.3s ease;
+}
+
+    .stat:hover {
+        transform: translateY(-8px);
+    }
+
+    .stat h3 {
+        font-size: 3.2rem;
+        margin-bottom: 8px;
+    }
+
+    .stat span {
+        font-size: 0.95rem;
+        color: #888;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+/* =======================
+   QUOTE
+======================= */
+.quote {
+    max-width: 800px;
+    margin: 160px auto;
+    text-align: center;
+    position: relative;
+}
+
+   
+
+    .quote p {
+        font-size: 1.4rem;
+        font-style: italic;
+        color: #aaa;
+        line-height: 1.9;
+    }
+
+/* =======================
+   FOOTER
+======================= */
+.footer {
+    background-color: #164b55;
+    padding: 100px 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+}
+
+.footer-left h2 {
+    font-size: 2rem;
+}
+
+.underline {
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    margin: 15px 0 30px;
+}
+
+.slogan {
+    font-style: italic;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.contact {
+    line-height: 1.8;
+}
+
+.newsletter-text {
+    margin-bottom: 20px;
+}
+
+.newsletter {
+    display: flex;
+}
+
+    .newsletter input {
+        padding: 12px;
+        border: none;
+        outline: none;
+        width: 180px;
+    }
+
+    .newsletter button {
+        background-color: #7ac143;
+        border: none;
+        color: #fff;
+        padding: 0 25px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+    .stats {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .newsletter {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+        .newsletter input {
+            width: 100%;
+        }
+
+        .newsletter button {
+            padding: 12px;
+        }
+
+
+    /* =========================
+   BÝZE ULAÞIN ALANI
+========================= */
+
+    .contact-section {
+        background-color: #b52525;
+        padding: 80px 20px;
+        color: #ffffff;
+    }
+
+    .contact-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+        .contact-container h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .contact-container .slogan {
+            font-style: italic;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+    .contact-info p {
+        font-size: 16px;
+        margin: 6px 0;
+    }
+
+    .newsletter-text {
+        margin: 40px 0 20px;
+        font-size: 15px;
+        opacity: 0.95;
+    }
+
+    /* FORM */
+    .newsletter-form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+        .newsletter-form input {
+            padding: 12px 14px;
+            border: none;
+            outline: none;
+            min-width: 220px;
+            font-size: 14px;
+        }
+
+        .newsletter-form button {
+            background-color: #ffffff;
+            color: #b52525;
+            border: none;
+            padding: 12px 22px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .newsletter-form button:hover {
+                background-color: #1a1a1a;
+                color: #ffffff;
+            }
+
+
+}

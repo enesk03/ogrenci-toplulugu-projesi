@@ -1,0 +1,58 @@
+﻿.members-page {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+.members-hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+    .members-hero h1 {
+        font-size: 46px;
+        margin-bottom: 10px;
+    }
+
+    .members-hero p {
+        color: #ccc;
+        font-size: 18px;
+    }
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    padding: 60px 80px;
+}
+
+.member-card {
+    background-color: #111;
+    border-radius: 14px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+    .member-card:hover {
+        transform: translateY(-6px);
+        background-color: #151515;
+    }
+
+    .member-card img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+
+    .member-card h3 {
+        margin: 8px 0;
+        font-size: 18px;
+    }
+
+    .member-card span {
+        color: #b52525;
+        font-size: 14px;
+    }

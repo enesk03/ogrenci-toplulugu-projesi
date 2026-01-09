@@ -1,0 +1,132 @@
+﻿/* GENEL SAYFA */
+.events-page {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+.events-hero {
+    background: linear-gradient(to bottom, #1a1a1a, #000);
+    padding: 80px 20px 40px;
+    text-align: center;
+}
+
+    .events-hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        background: linear-gradient(90deg, #fff, #b52525);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    .events-hero p {
+        color: #aaa;
+        font-size: 1.1rem;
+    }
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background-color: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #222;
+}
+
+    .event-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 30px rgba(181, 37, 37, 0.2); /* Kırmızımsı glow */
+        border-color: #333;
+    }
+
+.card-image-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+    .card-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
+
+.event-card:hover .card-image-wrapper img {
+    transform: scale(1.1); 
+}
+
+.date-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+    .date-badge .day {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #fff;
+        line-height: 1;
+    }
+
+    .date-badge .month {
+        display: block;
+        font-size: 0.8rem;
+        color: #b52525; 
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+.event-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+    .event-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+
+.event-location {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.read-more {
+    margin-top: auto;
+    font-size: 0.9rem;
+    color: #b52525;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
