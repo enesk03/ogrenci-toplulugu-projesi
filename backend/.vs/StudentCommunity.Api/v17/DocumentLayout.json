@@ -1,0 +1,753 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\entities\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\entities\\sitetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\entities\\sitetext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\entities\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\entities\\member.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\entities\\aplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\entities\\aplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\entities\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\entities\\adminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\entities\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\entities\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\dtos\\event\\eventlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\dtos\\event\\eventlistdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\dtos\\event\\eventdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\dtos\\event\\eventdetaildto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\dtos\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\dtos\\common\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\dtos\\about\\aboutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\dtos\\about\\aboutdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\controllers\\teamscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\controllers\\sitetextscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\controllers\\sitetextscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\controllers\\memberscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\controllers\\filescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\controllers\\eventscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\controllers\\applicationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\migrations\\20260207185500_addroleandteamtoadminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\migrations\\20260207185500_addroleandteamtoadminuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\About.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\components\\Footer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\wwwroot\\uploads\\789e4258-431d-473b-8565-0ea9db60c089.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\wwwroot\\uploads\\789e4258-431d-473b-8565-0ea9db60c089.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\wwwroot\\uploads\\6375640f-6701-4dca-974d-9e59848f91a4.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\wwwroot\\uploads\\6375640f-6701-4dca-974d-9e59848f91a4.jpg||{58961B49-13E0-48C0-9258-13CBC4D40279}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\About.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\components\\Footer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Contact.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\migrations\\20260108235913_addadmintable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\migrations\\20260108235913_addadmintable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\migrations\\20260207193551_addorganizerteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\migrations\\20260207193551_addorganizerteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\migrations\\20260218110903_newwdatass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\migrations\\20260218110903_newwdatass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|c:\\users\\muhammed enes kaya\\desktop\\toplulukprojesi\\backend\\studentcommunity.api\\migrations\\20260218085842_newdatas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64DDC3EE-81BB-4A9B-B99B-3B6715F511B7}|StudentCommunity.Api\\StudentCommunity.Api.csproj|solutionrelative:studentcommunity.api\\migrations\\20260218085842_newdatas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 10,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EventListDto.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\DTOs\\Event\\EventListDto.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\DTOs\\Event\\EventListDto.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\DTOs\\Event\\EventListDto.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\DTOs\\Event\\EventListDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T20:46:57.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "About.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\About.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Entities\\About.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\About.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Entities\\About.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:36:50.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminUser.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\AdminUser.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Entities\\AdminUser.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\AdminUser.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Entities\\AdminUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T23:58:04.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Aplication.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\Aplication.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Entities\\Aplication.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\Aplication.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Entities\\Aplication.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAzwAsAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T08:53:43.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\Event.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Entities\\Event.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\Event.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Entities\\Event.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAUwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:37:49.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Member.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\Member.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Entities\\Member.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\Member.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Entities\\Member.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:37:51.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SiteText.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\SiteText.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Entities\\SiteText.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\SiteText.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Entities\\SiteText.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:38:18.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Team.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\Team.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Entities\\Team.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Entities\\Team.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Entities\\Team.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T11:06:59.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Program.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Program.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T17:31:40.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EventDetailDto.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\DTOs\\Event\\EventDetailDto.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\DTOs\\Event\\EventDetailDto.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\DTOs\\Event\\EventDetailDto.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\DTOs\\Event\\EventDetailDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:36:46.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\DTOs\\Common\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\DTOs\\Common\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\DTOs\\Common\\ApiResponse.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\DTOs\\Common\\ApiResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T13:00:03.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AboutDto.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\DTOs\\About\\AboutDto.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\DTOs\\About\\AboutDto.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\DTOs\\About\\AboutDto.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\DTOs\\About\\AboutDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T12:59:59.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SiteTextsController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\SiteTextsController.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Controllers\\SiteTextsController.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\SiteTextsController.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Controllers\\SiteTextsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T06:45:47.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MembersController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\MembersController.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Controllers\\MembersController.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\MembersController.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Controllers\\MembersController.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAowEgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T06:27:25.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:35:19.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "FilesController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\FilesController.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Controllers\\FilesController.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\FilesController.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Controllers\\FilesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T06:52:18.714Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EventsController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\EventsController.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Controllers\\EventsController.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\EventsController.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Controllers\\EventsController.cs",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAowGQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T00:21:34.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TeamsController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\TeamsController.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Controllers\\TeamsController.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\TeamsController.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Controllers\\TeamsController.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwBQAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T11:09:44.803Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T23:58:19.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAgwFQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T23:59:54.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ApplicationsController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\ApplicationsController.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Controllers\\ApplicationsController.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\ApplicationsController.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Controllers\\ApplicationsController.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAAAEcAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T09:00:18.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "AboutController.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\AboutController.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Controllers\\AboutController.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Controllers\\AboutController.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Controllers\\AboutController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T07:33:21.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "20260207185500_AddRoleAndTeamToAdminUser.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Migrations\\20260207185500_AddRoleAndTeamToAdminUser.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Migrations\\20260207185500_AddRoleAndTeamToAdminUser.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Migrations\\20260207185500_AddRoleAndTeamToAdminUser.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Migrations\\20260207185500_AddRoleAndTeamToAdminUser.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA8AAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T18:55:00.257Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\App.jsx",
+              "RelativeDocumentMoniker": "..\\frontend\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\App.jsx",
+              "RelativeToolTip": "..\\frontend\\src\\App.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-18T12:50:44.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "20260218110903_newwdatass.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Migrations\\20260218110903_newwdatass.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Migrations\\20260218110903_newwdatass.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Migrations\\20260218110903_newwdatass.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Migrations\\20260218110903_newwdatass.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T11:09:04.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "20260218085842_newdatas.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Migrations\\20260218085842_newdatas.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Migrations\\20260218085842_newdatas.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Migrations\\20260218085842_newdatas.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Migrations\\20260218085842_newdatas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-18T08:58:42.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "20260207193551_AddOrganizerteam.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Migrations\\20260207193551_AddOrganizerteam.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Migrations\\20260207193551_AddOrganizerteam.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Migrations\\20260207193551_AddOrganizerteam.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Migrations\\20260207193551_AddOrganizerteam.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T19:35:51.289Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\appsettings.json",
+              "RelativeToolTip": "StudentCommunity.Api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-07T13:49:22.056Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "About.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\About.css",
+              "RelativeDocumentMoniker": "..\\frontend\\src\\pages\\About.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\About.css",
+              "RelativeToolTip": "..\\frontend\\src\\pages\\About.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-07T18:31:37.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\index.css",
+              "RelativeDocumentMoniker": "..\\frontend\\src\\index.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\index.css",
+              "RelativeToolTip": "..\\frontend\\src\\index.css",
+              "ViewState": "AQIAALMAAAAAAAAAAAAiwE0BAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-07T11:38:11.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Footer.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\components\\Footer.jsx",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\components\\Footer.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\components\\Footer.jsx",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\components\\Footer.jsx",
+              "ViewState": "AQIAABoAAAAAAAAAAAAAwDEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-01-08T23:36:57.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "789e4258-431d-473b-8565-0ea9db60c089.jpg",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\wwwroot\\uploads\\789e4258-431d-473b-8565-0ea9db60c089.jpg",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\wwwroot\\uploads\\789e4258-431d-473b-8565-0ea9db60c089.jpg",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\wwwroot\\uploads\\789e4258-431d-473b-8565-0ea9db60c089.jpg",
+              "RelativeToolTip": "StudentCommunity.Api\\wwwroot\\uploads\\789e4258-431d-473b-8565-0ea9db60c089.jpg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-09T07:33:09.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "6375640f-6701-4dca-974d-9e59848f91a4.jpg",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\wwwroot\\uploads\\6375640f-6701-4dca-974d-9e59848f91a4.jpg",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\wwwroot\\uploads\\6375640f-6701-4dca-974d-9e59848f91a4.jpg",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\wwwroot\\uploads\\6375640f-6701-4dca-974d-9e59848f91a4.jpg",
+              "RelativeToolTip": "StudentCommunity.Api\\wwwroot\\uploads\\6375640f-6701-4dca-974d-9e59848f91a4.jpg",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2026-01-09T07:33:05.726Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "About.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\About.jsx",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\About.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\About.jsx",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\About.jsx",
+              "ViewState": "AQIAACUAAAAAAAAAAAAAAEAAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-01-09T07:21:36.22Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Admin.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Admin.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Admin.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Admin.css",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Admin.css",
+              "ViewState": "AQIAAJcAAAAAAAAAAADwv6cAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-09T00:15:37.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Login.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Login.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Login.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Login.css",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Login.css",
+              "ViewState": "AQIAADgAAAAAAAAAAADwv1MAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-09T00:09:18.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Login.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Login.jsx",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Login.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Login.jsx",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Login.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADcAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-01-09T00:09:02.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\App.jsx",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\App.jsx",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\App.jsx",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-01-09T00:03:30.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "20260108235913_AddAdminTable.cs",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Migrations\\20260108235913_AddAdminTable.cs",
+              "RelativeDocumentMoniker": "StudentCommunity.Api\\Migrations\\20260108235913_AddAdminTable.cs",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\backend\\StudentCommunity.Api\\Migrations\\20260108235913_AddAdminTable.cs",
+              "RelativeToolTip": "StudentCommunity.Api\\Migrations\\20260108235913_AddAdminTable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T23:59:13.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Footer.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\components\\Footer.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\components\\Footer.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\components\\Footer.css",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\components\\Footer.css",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAkwHUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-08T23:51:38.765Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Contact.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Contact.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Contact.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Contact.css",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Contact.css",
+              "ViewState": "AQIAADkAAAAAAAAAAAAkwFYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-08T23:47:05.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Contact.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Contact.jsx",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Contact.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Contact.jsx",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Contact.jsx",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAD8AAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-01-08T23:46:45.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Home.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Home.jsx",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Home.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Home.jsx",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Home.jsx",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAADsAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-01-08T23:35:26.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\index.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\index.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\index.css",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\index.css",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAAIAAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-08T23:30:15.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Home.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Home.css",
+              "RelativeDocumentMoniker": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Home.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\ogrenci-toplulugu\\src\\pages\\Home.css",
+              "RelativeToolTip": "..\\..\\..\\ogrenci-toplulugu\\src\\pages\\Home.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-08T23:29:38.284Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

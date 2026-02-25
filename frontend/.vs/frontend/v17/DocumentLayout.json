@@ -1,0 +1,537 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\index.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\App.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Members.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Members.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Members.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Members.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Home.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\HeroSlider.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\HeroSlider.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Gallery.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Gallery.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Events.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Events.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Events.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Events.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\EventDetail.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\EventDetail.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\EventDetail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\EventDetail.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Contact.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Contact.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Contact.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Admin.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Admin.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Apply.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Apply.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\Admin.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\About.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\About.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\About.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\About.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Navbar.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\HeroSlider.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\HeroSlider.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\HeroSlider.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\HeroSlider.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Footer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Footer.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Footer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\components\\Footer.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\HeroSlider.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\pages\\HeroSlider.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "main.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\main.jsx",
+              "RelativeDocumentMoniker": "src\\main.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\main.jsx",
+              "RelativeToolTip": "src\\main.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-25T13:09:06.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\index.css",
+              "RelativeDocumentMoniker": "src\\index.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\index.css",
+              "RelativeToolTip": "src\\index.css",
+              "ViewState": "AQIAALMBAAAAAAAAAAAAAL4BAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-25T13:08:25.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\App.css",
+              "RelativeDocumentMoniker": "src\\App.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\App.css",
+              "RelativeToolTip": "src\\App.css",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-25T13:08:19.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Members.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Members.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\Members.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Members.jsx",
+              "RelativeToolTip": "src\\pages\\Members.jsx",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAADwAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-25T13:08:02.824Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Members.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Members.css",
+              "RelativeDocumentMoniker": "src\\pages\\Members.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Members.css",
+              "RelativeToolTip": "src\\pages\\Members.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEgAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-25T13:07:21.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Home.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Home.css",
+              "RelativeDocumentMoniker": "src\\pages\\Home.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Home.css",
+              "RelativeToolTip": "src\\pages\\Home.css",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-25T13:06:31.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HeroSlider.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\HeroSlider.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\HeroSlider.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\HeroSlider.jsx",
+              "RelativeToolTip": "src\\pages\\HeroSlider.jsx",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAEkAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-25T13:06:15.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Events.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Events.css",
+              "RelativeDocumentMoniker": "src\\pages\\Events.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Events.css",
+              "RelativeToolTip": "src\\pages\\Events.css",
+              "ViewState": "AQIAAH4AAAAAAAAAAAAAAGwAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-25T13:05:37.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EventDetail.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\EventDetail.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\EventDetail.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\EventDetail.jsx",
+              "RelativeToolTip": "src\\pages\\EventDetail.jsx",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-25T13:05:25.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EventDetail.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\EventDetail.css",
+              "RelativeDocumentMoniker": "src\\pages\\EventDetail.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\EventDetail.css",
+              "RelativeToolTip": "src\\pages\\EventDetail.css",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-25T13:05:18.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\App.jsx",
+              "RelativeDocumentMoniker": "src\\App.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\App.jsx",
+              "RelativeToolTip": "src\\App.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-18T09:19:12.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "About.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\About.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\About.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\About.jsx",
+              "RelativeToolTip": "src\\pages\\About.jsx",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-25T13:03:39.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Admin.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Admin.css",
+              "RelativeDocumentMoniker": "src\\pages\\Admin.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Admin.css",
+              "RelativeToolTip": "src\\pages\\Admin.css",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-07T19:39:40.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Home.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Home.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\Home.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Home.jsx",
+              "RelativeToolTip": "src\\pages\\Home.jsx",
+              "ViewState": "AQIAADEAAAAAAAAAAAAUwEIAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-25T11:40:23.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Login.css",
+              "RelativeDocumentMoniker": "src\\pages\\Login.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Login.css",
+              "RelativeToolTip": "src\\pages\\Login.css",
+              "ViewState": "AQIAAHsAAAAAAAAAAAAAAAcAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-25T11:36:02.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Login.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\Login.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Login.jsx",
+              "RelativeToolTip": "src\\pages\\Login.jsx",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAAwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-07T18:42:10.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Navbar.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Navbar.jsx",
+              "RelativeDocumentMoniker": "src\\components\\Navbar.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Navbar.jsx",
+              "RelativeToolTip": "src\\components\\Navbar.jsx",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAwCoAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-18T09:18:41.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Navbar.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Navbar.css",
+              "RelativeDocumentMoniker": "src\\components\\Navbar.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Navbar.css",
+              "RelativeToolTip": "src\\components\\Navbar.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-18T09:18:35.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Events.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Events.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\Events.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Events.jsx",
+              "RelativeToolTip": "src\\pages\\Events.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-18T08:26:01.489Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Gallery.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Gallery.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\Gallery.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Gallery.jsx",
+              "RelativeToolTip": "src\\pages\\Gallery.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-18T08:26:12.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "HeroSlider.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\HeroSlider.jsx",
+              "RelativeDocumentMoniker": "src\\components\\HeroSlider.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\HeroSlider.jsx",
+              "RelativeToolTip": "src\\components\\HeroSlider.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-18T08:44:48.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "HeroSlider.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\HeroSlider.css",
+              "RelativeDocumentMoniker": "src\\components\\HeroSlider.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\HeroSlider.css",
+              "RelativeToolTip": "src\\components\\HeroSlider.css",
+              "ViewState": "AQIAAF0AAAAAAAAAAAAAAG8AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-18T08:44:57.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Admin.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Admin.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\Admin.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Admin.jsx",
+              "RelativeToolTip": "src\\pages\\Admin.jsx",
+              "ViewState": "AQIAALkAAAAAAAAAAAAUwLgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-07T18:43:15.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Apply.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Apply.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\Apply.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Apply.jsx",
+              "RelativeToolTip": "src\\pages\\Apply.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-18T11:10:43.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Contact.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Contact.css",
+              "RelativeDocumentMoniker": "src\\pages\\Contact.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Contact.css",
+              "RelativeToolTip": "src\\pages\\Contact.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-09T12:12:18.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Contact.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Contact.jsx",
+              "RelativeDocumentMoniker": "src\\pages\\Contact.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\Contact.jsx",
+              "RelativeToolTip": "src\\pages\\Contact.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-09T12:12:27.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Footer.jsx",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Footer.jsx",
+              "RelativeDocumentMoniker": "src\\components\\Footer.jsx",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Footer.jsx",
+              "RelativeToolTip": "src\\components\\Footer.jsx",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACAAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2026-02-25T11:33:05.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Footer.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Footer.css",
+              "RelativeDocumentMoniker": "src\\components\\Footer.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\components\\Footer.css",
+              "RelativeToolTip": "src\\components\\Footer.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-25T11:33:23.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "About.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\About.css",
+              "RelativeDocumentMoniker": "src\\pages\\About.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\About.css",
+              "RelativeToolTip": "src\\pages\\About.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-07T18:32:54.423Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "HeroSlider.css",
+              "DocumentMoniker": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\HeroSlider.css",
+              "RelativeDocumentMoniker": "src\\pages\\HeroSlider.css",
+              "ToolTip": "C:\\Users\\Muhammed Enes KAYA\\Desktop\\ToplulukProjesi\\frontend\\src\\pages\\HeroSlider.css",
+              "RelativeToolTip": "src\\pages\\HeroSlider.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-02-18T08:25:56.734Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

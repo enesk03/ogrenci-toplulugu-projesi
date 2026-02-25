@@ -1,0 +1,111 @@
+.footer {
+    background-color: #111; /* Koyu Zemin */
+    color: #fff;
+    padding: 50px 0 0 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: auto; 
+}
+
+/* Üst Kýsým (Sütunlar) */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+    .footer-col h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        color: #A6192E; /* KTÜN Kýrmýzýsý */
+    }
+
+    .footer-col h4 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #A6192E;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .footer-col p {
+        color: #bbb;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .footer-col ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+            .footer-col ul li a {
+                color: #bbb;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+
+                .footer-col ul li a:hover {
+                    color: #A6192E;
+                    padding-left: 5px;
+                }
+
+/* ALT KISIM (Developed by alaný) */
+.footer-bottom {
+    background-color: #000;
+    padding: 20px 0;
+    border-top: 1px solid #222;
+}
+
+.footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column; /* Mobilde alt alta olsun */
+    align-items: flex-start; /* Sola yasla */
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.developer-credit {
+    margin-top: 5px;
+    color: #aaa;
+    font-size: 0.95rem;
+}
+
+    .developer-credit strong {
+        color: #ddd; 
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+        .developer-credit strong:hover {
+            color: #A6192E;
+            cursor: default;
+        }
+
+/* Tablet ve Masaüstü için yan yana alalým */
+@media (min-width: 768px) {
+    .footer-bottom-content {
+        flex-direction: row;
+        justify-content: space-between; /* Biri saða biri sola */
+        align-items: center;
+    }
+
+    .developer-credit {
+        margin-top: 0;
+    }
+}

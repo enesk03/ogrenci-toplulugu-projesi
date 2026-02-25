@@ -1,0 +1,168 @@
+/* =======================
+   ADMIN PANELÝ - KTÜN TEMASI
+======================= */
+.admin-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- SOL MENÜ (SIDEBAR) --- */
+.admin-sidebar {
+    width: 260px;
+    background-color: #B52525; /* Bordo */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 4px 0 10px rgba(0,0,0,0.1);
+}
+
+.admin-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 20px;
+}
+
+.admin-sidebar nav button {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.8);
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+    .admin-sidebar nav button:hover {
+        background-color: rgba(255,255,255,0.1);
+        color: white;
+        padding-left: 20px; /* Hover animasyonu */
+    }
+
+    .admin-sidebar nav button.active {
+        background-color: white;
+        color: #B52525;
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+.logout-btn {
+    margin-top: auto; /* En alta iter */
+    background-color: #8a1c1c !important; /* Koyu Bordo */
+    color: #ffcccc !important;
+}
+
+/* --- ÝÇERÝK ALANI (CONTENT) --- */
+.admin-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.admin-section h2 {
+    color: #333;
+    border-bottom: 2px solid #B52525;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- TABLOLAR --- */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+    .admin-table th {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        text-align: left;
+    }
+
+    .admin-table td {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+        color: #555;
+    }
+
+    .admin-table tr:hover {
+        background-color: #f9f9f9;
+    }
+
+.table-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* --- BUTONLAR --- */
+.add-btn {
+    background-color: #28a745; /* Yeþil (Ekleme için standart) */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    float: right;
+    margin-bottom: 15px;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.save-btn {
+    background-color: #B52525;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* --- MODAL (POPUP) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+    .modal-content input,
+    .modal-content textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }

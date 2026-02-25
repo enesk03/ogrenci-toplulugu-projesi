@@ -1,0 +1,133 @@
+﻿.contact-page {
+    background-color: #f4f6f9; 
+    color: #333; 
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* KART KUTUSU*/
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+    background: #ffffff; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08); 
+}
+
+/* SOL TARAF */
+.contact-info {
+    flex: 1;
+    padding: 40px;
+    background: linear-gradient(135deg, #A6192E 0%, #850d1e 100%);
+    min-width: 300px;
+    color: #fff; 
+}
+
+    .contact-info h1 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #fff;
+        font-weight: 700;
+    }
+
+.contact-desc {
+    color: #f1f1f1; 
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.info-item {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 8px;
+}
+
+    .info-item strong {
+        color: #fff;
+        margin-right: 10px;
+        font-weight: 700;
+        min-width: 80px;
+    }
+
+.contact-form {
+    flex: 1.2; 
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 300px;
+    background-color: #ffffff;
+}
+
+    .contact-form input,
+    .contact-form textarea {
+        background: #f9f9f9; /* Çok açık gri */
+        border: 1px solid #ddd; /* İnce gri çerçeve */
+        padding: 15px;
+        color: #333; 
+        border-radius: 8px;
+        font-family: inherit;
+        outline: none;
+        transition: 0.3s;
+        font-size: 1rem;
+    }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            background: #fff;
+            border-color: #A6192E; /* KTÜN Kırmızısı */
+            box-shadow: 0 0 0 3px rgba(166, 25, 46, 0.1);
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #aaa;
+        }
+
+    /* Buton */
+    .contact-form button {
+        background: #A6192E; /* KTÜN Kırmızısı */
+        color: white;
+        border: none;
+        padding: 15px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 10px;
+    }
+
+        .contact-form button:hover {
+            background: #850d1e;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(166, 25, 46, 0.3);
+        }
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        padding: 30px;
+    }
+
+    .contact-form {
+        padding: 30px;
+    }
+}

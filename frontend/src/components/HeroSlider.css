@@ -1,0 +1,140 @@
+.hero-slider {
+    width: 80%; /* 🔥 İsteğin üzerine Genişlik %80 yapıldı */
+    height: 70vh; /* Yükseklik: Ekranın %70'i (Çok uzun olmasın diye ayarladım) */
+    margin: 30px auto; /* Üstten 30px boşluk bırak ve YATAYDA ORTALA */
+    border-radius: 20px; /* Kenarları keskin olmasın, modern dursun */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5); /* Hafif gölge ekledik, öne çıksın */
+}
+
+/* Her Bir Slayt */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+    .slide.active {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    /* Resim Ayarları */
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Resmi kutuya tam sığdırır */
+        filter: brightness(0.65); /* Yazı okunsun diye resmi hafif kararttık */
+    }
+
+/* Resim Üzerindeki Yazılar */
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 2;
+    width: 80%;
+}
+
+    .slide-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        font-weight: 800;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+        letter-spacing: 1px;
+    }
+
+    .slide-content p {
+        font-size: 1.3rem;
+        margin-bottom: 30px;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+    }
+
+.slider-btn {
+    padding: 12px 35px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #A6192E; /* KTÜN Kırmızısı */
+    color: white;
+    border: none;
+    border-radius: 50px; /* Yuvarlak buton */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+    .slider-btn:hover {
+        background-color: #fff;
+        color: #A6192E;
+        transform: scale(1.05); /* Hoverda hafif büyüsün */
+    }
+
+/* Oklar (İleri - Geri Butonları) */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background: rgba(255, 255, 255, 0.2); /* Yarı saydam beyaz */
+    backdrop-filter: blur(5px); /* Arkası buzlu cam gibi olsun */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+    .arrow:hover {
+        background: #A6192E; /* Üzerine gelince kırmızı */
+        border-color: #A6192E;
+    }
+
+.arrow-left {
+    left: 20px;
+}
+
+.arrow-right {
+    right: 20px;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .hero-slider {
+        width: 95%; 
+        height: 50vh;
+        border-radius: 10px;
+    }
+
+    .slide-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .slide-content p {
+        font-size: 0.9rem;
+    }
+
+    .arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1.2rem;
+    }
+}

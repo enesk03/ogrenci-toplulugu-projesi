@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\StudentCommunity.Api",
+    "\\StudentCommunity.Api\\DTOs",
+    "\\StudentCommunity.Api\\DTOs\\Event"
+  ],
+  "SelectedNode": "\\StudentCommunity.Api\\DTOs\\Event\\EventDetailDto.cs",
+  "PreviewInSolutionExplorer": false
+}
