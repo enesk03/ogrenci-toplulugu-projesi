@@ -1,6 +1,6 @@
 ﻿import { useEffect, useState } from "react";
 import axios from "axios";
-import "./About.css"; // CSS dosyasını çağırdık
+import "./About.css"; 
 
 function About() {
     const [texts, setTexts] = useState({});
@@ -10,7 +10,6 @@ function About() {
         axios.get(`${BASE_URL}/api/sitetexts`)
             .then((res) => {
                 const textObj = {};
-                // API'den gelen veriyi işle
                 const dataList = res.data.data ? res.data.data : res.data;
 
                 if (Array.isArray(dataList)) {

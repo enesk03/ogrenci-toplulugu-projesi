@@ -71,7 +71,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* ✅ Boşluk kalırsa burası doldursun */
+    flex-grow: 1; /*  Boşluk kalırsa burası doldursun */
 }
 
 /* Başlık (Max 2 Satır) */
