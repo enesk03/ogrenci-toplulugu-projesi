@@ -10,7 +10,7 @@ function Login() {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const BASE_URL = "https://localhost:7060";
+    const BASE_URL = "http://localhost:7060";
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -18,43 +18,40 @@ function Login() {
         setLoading(true);
 
         try {
-            console.log("İstek gönderiliyor...", { username, password });
-
+            // 1. İsteği gönderiyoruz
             const response = await axios.post(`${BASE_URL}/api/auth/login`, {
                 username,
                 password
             });
 
-            console.log("Backend Cevabı:", response.data);
+            // 2. Veriyi ayıklıyoruz (Backend'den gelen yapıya göre)
+            // AuthController'da doğrudan objeyi dönmüştük: { message, token, role, team }
+            const resData = response.data;
 
-       
-            const responseData = response.data.data ? response.data.data : response.data;
+            const token = resData.token;
+            const role = resData.role;
+            const team = resData.team;
 
-            const token = responseData.token || responseData.Token || responseData.accessToken || responseData.jwt;
-            const role = responseData.role || responseData.Role || "Admin"; 
-            const team = responseData.team || responseData.Team || "Yönetim";
-
-         
+            // 3. Token kontrolü ve Saklama
             if (token) {
+                // Admin.jsx'in beklediği anahtar isimleriyle localStorage'a yazıyoruz
                 localStorage.setItem("token", token);
-                localStorage.setItem("adminRole", role);
-                localStorage.setItem("adminTeam", team);
-                
-                console.log("✅ Giriş Başarılı! Yönlendiriliyor...");
+                localStorage.setItem("adminRole", role || "Admin");
+                localStorage.setItem("adminTeam", team || "Genel");
+
+                console.log("✅ Giriş Başarılı! Admin paneline geçiliyor...");
                 navigate("/admin");
             } else {
-                console.warn("⚠️ Token bulunamadı. Backend yanıtını inceleyin.");
-                // Backend'den gelen tam yanıtı ekrana basarak sorunu görelim
-                setError("Giriş başarılı ancak Token alınamadı. Gelen veri: " + JSON.stringify(responseData));
+                setError("Hata: Sunucudan anahtar (token) alınamadı.");
             }
 
         } catch (err) {
             console.error("❌ HATA:", err);
 
             if (err.code === "ERR_NETWORK") {
-                setError("Sunucuya ulaşılamıyor! Backend çalışıyor mu? (Port 7060)");
+                setError("Sunucuya ulaşılamıyor! Backend (7060 portu) çalışıyor mu?");
             } else if (err.response) {
-                // Sunucudan gelen hata mesajı (400, 401 vb.)
+                // Backend'den gelen 401 veya 400 hataları
                 setError(err.response.data.message || "Kullanıcı adı veya şifre hatalı.");
             } else {
                 setError("Beklenmedik bir hata oluştu.");
@@ -67,45 +64,50 @@ function Login() {
     return (
         <div className="login-page">
             <div className="login-card">
-                
                 <div className="login-header">
                     <h2>Yönetici Girişi</h2>
-                    <p>Lütfen devam etmek için kimliğinizi doğrulayın.</p>
+                    <p>KTÜN Topluluk Yönetim Paneline hoş geldiniz.</p>
                 </div>
 
-                {/* Hata Mesajı Kutusu */}
-                {error && <div className="error-msg" style={{wordBreak: "break-word"}}>{error}</div>}
+                {/* Hata Mesajı */}
+                {error && (
+                    <div className="error-msg">
+                        <i className="fas fa-exclamation-circle"></i> {error}
+                    </div>
+                )}
 
                 <form onSubmit={handleLogin} className="login-form">
                     <div className="input-group">
                         <label>Kullanıcı Adı</label>
-                        <input 
-                            type="text" 
-                            placeholder="Örn: admin" 
-                            value={username} 
-                            onChange={(e) => setUsername(e.target.value)} 
-                            required 
+                        <input
+                            type="text"
+                            placeholder="Kullanıcı adınızı girin"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                            required
+                            autoComplete="username"
                         />
                     </div>
 
                     <div className="input-group">
                         <label>Şifre</label>
-                        <input 
-                            type="password" 
-                            placeholder="••••••" 
-                            value={password} 
-                            onChange={(e) => setPassword(e.target.value)} 
-                            required 
+                        <input
+                            type="password"
+                            placeholder="••••••"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                            autoComplete="current-password"
                         />
                     </div>
 
                     <button type="submit" className="login-btn" disabled={loading}>
-                        {loading ? "GİRİŞ YAPILIYOR..." : "GİRİŞ YAP"}
+                        {loading ? "KİMLİK DOĞRULANIYOR..." : "GİRİŞ YAP"}
                     </button>
                 </form>
 
                 <div className="login-footer">
-                    &copy; 2026 KTÜN Öğrenci Topluluğu Yönetim Paneli
+                    &copy; 2026 KTÜN Öğrenci Toplulukları
                 </div>
             </div>
         </div>

@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
 using StudentCommunity.Api.Entities;
-
-
 
 namespace StudentCommunity.Api.Data
 {
@@ -21,5 +17,19 @@ namespace StudentCommunity.Api.Data
         public DbSet<AdminUser> AdminUsers { get; set; }
         public DbSet<Application> Applications { get; set; }
         public DbSet<Team> Teams { get; set; }
+
+        public DbSet<Project> Projects { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Member>()
+                .Property(e => e.Projects)
+                .HasConversion(
+                    v => string.Join(',', v),
+                    v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).ToList()
+                );
+        }
     }
 }

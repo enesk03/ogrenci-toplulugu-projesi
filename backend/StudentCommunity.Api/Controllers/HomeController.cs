@@ -8,11 +8,6 @@ namespace StudentCommunity.Api.Controllers
     public class HomeController : ControllerBase
     {
         private readonly AppDbContext _context;
-
-        public HomeController(AppDbContext context)
-        {
-            _context = context;
-        }
-
+        public HomeController(AppDbContext context) { _context = context; }
     }
 }

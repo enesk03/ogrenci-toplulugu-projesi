@@ -2,218 +2,173 @@
 import axios from "axios";
 import "./Admin.css";
 
+const TeamSelect = ({ teamsList, value, onChange }) => (
+    <select name="team" value={value} onChange={onChange} className="admin-select" required>
+        <option value="">Bir Takım Seçiniz...</option>
+        {teamsList.map(t => (
+            <option key={t.id} value={t.name}>{t.name}</option>
+        ))}
+    </select>
+);
+
 function Admin() {
     const [activeTab, setActiveTab] = useState("events");
     const [data, setData] = useState([]);
-    const [teamsList, setTeamsList] = useState([]); // 🔥 Ekipleri tutacak liste
+    const [teamsList, setTeamsList] = useState([]);
     const [modalOpen, setModalOpen] = useState(false);
     const [editingItem, setEditingItem] = useState(null);
 
     const userRole = localStorage.getItem("adminRole");
     const userTeam = localStorage.getItem("adminTeam");
+    const BASE_URL = "http://localhost:7060";
 
     const [formData, setFormData] = useState({
         title: "", description: "", date: "", location: "", posterUrl: "",
-        name: "", imageUrl: "", titleMember: "", team: "",
-        key: "", value: ""
+        name: "", imageUrl: "", titleMember: "", team: "", key: "", value: "",
+        email: "", graduationNote: "", projects: "", githubUrl: ""
     });
 
-    const BASE_URL = "https://localhost:7060";
+    const getToken = () => localStorage.getItem("token");
+    const getAuthHeader = () => ({ headers: { Authorization: `Bearer ${getToken()}` } });
 
-    // 1. TAKIMLARI ÇEK (Dropdownlar için gerekli)
-    const fetchTeams = () => {
-        axios.get(`${BASE_URL}/api/teams`)
-            .then(res => {
-                // Backend yapına göre .data veya .data.data olabilir
-                setTeamsList(res.data.data ? res.data.data : res.data);
-            })
-            .catch(err => console.error("Takımlar çekilemedi:", err));
+    const resetForm = () => {
+        setFormData({
+            title: "", description: "", date: "", location: "", posterUrl: "",
+            name: "", imageUrl: "", titleMember: "", team: "", key: "", value: "",
+            email: "", graduationNote: "", projects: "", githubUrl: ""
+        });
     };
 
-    // Sayfa açılınca takımları getir
-    useEffect(() => {
-        fetchTeams();
-    }, []);
-
-    // 2. LİSTE VERİLERİNİ ÇEK
     const fetchData = () => {
         let endpoint = "";
         if (activeTab === "events") endpoint = "/api/events";
+        else if (activeTab === "projects") endpoint = "/api/projects";
         else if (activeTab === "members") endpoint = "/api/members";
         else if (activeTab === "texts") endpoint = "/api/sitetexts";
         else if (activeTab === "applications") endpoint = "/api/applications";
-        else if (activeTab === "teams") endpoint = "/api/teams"; // 🔥 Yeni Sekme
+        else if (activeTab === "teams") endpoint = "/api/teams";
 
-        axios.get(`${BASE_URL}${endpoint}`)
+        axios.get(`${BASE_URL}${endpoint}`, getAuthHeader())
             .then((res) => {
                 let incomingData = res.data.data ? res.data.data : res.data;
-
-                // Takım lideri kısıtlaması
                 if (userRole === "TeamLead") {
-                    if (activeTab === "members") {
-                        incomingData = incomingData.filter(m => m.team === userTeam);
-                    }
-                    if (activeTab === "applications") {
-                        incomingData = incomingData.filter(a => a.interestedTeam === userTeam);
-                    }
+                    if (activeTab === "members") incomingData = incomingData.filter(m => m.team === userTeam);
+                    if (activeTab === "applications") incomingData = incomingData.filter(a => a.interestedTeam === userTeam);
                 }
-                setData(incomingData);
+                setData(Array.isArray(incomingData) ? incomingData : [incomingData]);
             })
-            .catch((err) => console.error("Veri çekilemedi:", err));
+            .catch((err) => { if (err.response?.status === 401) window.location.href = "/login"; });
     };
 
     useEffect(() => {
-        resetForm();
-        fetchData();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [activeTab]);
+        axios.get(`${BASE_URL}/api/teams`, getAuthHeader())
+            .then(res => setTeamsList(res.data.data ? res.data.data : res.data))
+            .catch(err => console.error(err));
+    }, []);
 
-    const handleInputChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+    useEffect(() => { fetchData(); }, [activeTab]);
 
-    // GENEL KAYDETME FONKSİYONU
+    const handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         let endpoint = "";
         let payload = {};
 
-        // Hangi sekmedeyiz?
         if (activeTab === "events") {
             endpoint = "/api/events";
-            const selectedTeam = userRole === "TeamLead" ? userTeam : (formData.team || "Yönetim Kurulu");
             payload = {
+                id: editingItem ? editingItem.id : 0,
                 title: formData.title, description: formData.description,
                 eventDate: formData.date, location: formData.location,
-                posterUrl: formData.posterUrl, organizerTeam: selectedTeam
+                posterUrl: formData.posterUrl, organizerTeam: formData.team || "Yönetim"
+            };
+        } else if (activeTab === "projects") {
+            endpoint = "/api/projects";
+            payload = {
+                id: editingItem ? editingItem.id : 0,
+                title: formData.title,
+                description: formData.description,
+                imageUrl: formData.imageUrl,
+                githubUrl: formData.githubUrl,
+                team: formData.team || "Genel"
             };
         } else if (activeTab === "members") {
             endpoint = "/api/members";
-            const selectedTeam = userRole === "TeamLead" ? userTeam : (formData.team || "Yönetim Kurulu");
+            const projectsArray = formData.projects ? formData.projects.split(',').map(p => p.trim()).filter(p => p !== "") : [];
             payload = {
+                id: editingItem ? editingItem.id : 0,
                 name: formData.name, title: formData.titleMember,
-                imageUrl: formData.imageUrl, team: selectedTeam
+                imageUrl: formData.imageUrl, team: formData.team,
+                email: formData.email, graduationNote: formData.graduationNote,
+                projects: projectsArray, isGraduated: formData.team === "Mezunlarımız"
             };
         } else if (activeTab === "texts") {
             endpoint = "/api/sitetexts";
-            payload = { value: formData.value }; // Site yazıları Key ile güncellenir
+            payload = { id: editingItem.id, key: editingItem.key, value: formData.value };
         } else if (activeTab === "teams") {
             endpoint = "/api/teams";
-            payload = { name: formData.name };
+            payload = { id: editingItem ? editingItem.id : 0, name: formData.name };
         }
 
         try {
             if (editingItem) {
-                // Güncelleme
                 const id = editingItem.id || editingItem.key;
-                // Site yazıları hariç diğerlerinde ID kullanıyoruz
-                await axios.put(`${BASE_URL}${endpoint}/${id}`, payload);
+                await axios.put(`${BASE_URL}${endpoint}/${id}`, payload, getAuthHeader());
             } else {
-                // Yeni Ekleme
-                await axios.post(`${BASE_URL}${endpoint}`, payload);
+                await axios.post(`${BASE_URL}${endpoint}`, payload, getAuthHeader());
             }
-
-            console.log("✅ İŞLEM BAŞARILI!");
             setModalOpen(false);
             setEditingItem(null);
             resetForm();
-            fetchData(); // Tabloyu yenile
-            if (activeTab === "teams") fetchTeams(); // Eğer takım eklendiyse dropdown'ı da yenile
-        } catch (error) {
-            console.error("❌ HATA:", error);
-            alert("İşlem sırasında hata oluştu.");
-        }
+            fetchData();
+        } catch { alert("İşlem başarısız oldu."); }
     };
 
-    const handleDelete = async (id) => {
-        if (!window.confirm("Silmek istediğine emin misin?")) return;
-
-        let endpoint = "";
-        if (activeTab === "events") endpoint = "/api/events";
-        else if (activeTab === "members") endpoint = "/api/members";
-        else if (activeTab === "texts") endpoint = "/api/sitetexts";
-        else if (activeTab === "teams") endpoint = "/api/teams";
-
-        try {
-            await axios.delete(`${BASE_URL}${endpoint}/${id}`);
-            fetchData();
-            if (activeTab === "teams") fetchTeams(); // Takım silindiyse dropdown'ı güncelle
-        } catch (error) { console.error("Silinemedi:", error); }
-    };
-
-    const updateAppStatus = async (id, status) => {
-        try {
-            await axios.put(`${BASE_URL}/api/applications/${id}/status`, `"${status}"`, {
-                headers: { 'Content-Type': 'application/json' }
-            });
-            alert(`Başvuru ${status} olarak işaretlendi.`);
-            fetchData();
-        } catch (error) { console.error("Durum güncellenemedi", error); }
+    const handleApproveProject = (appId) => {
+        axios.post(`${BASE_URL}/api/applications/approve-project/${appId}`, {}, getAuthHeader())
+            .then(() => {
+                alert("Üye projeye başarıyla eklendi!");
+                fetchData();
+            })
+            .catch(() => alert("Hata oluştu."));
     };
 
     const handleEdit = (item) => {
         setEditingItem(item);
         setFormData({
-            title: item.title || "", description: item.description || "",
+            title: item.title || "",
+            description: item.description || "",
             date: item.eventDate ? item.eventDate.substring(0, 16) : "",
-            location: item.location || "", posterUrl: item.posterUrl || "",
-            name: item.name || "", imageUrl: item.imageUrl || "",
-            titleMember: item.title || "", team: item.team || item.organizerTeam || "",
-            key: item.key || "", value: item.value || ""
+            location: item.location || "",
+            posterUrl: item.posterUrl || "",
+            name: item.name || "",
+            imageUrl: item.imageUrl || "",
+            titleMember: item.title || "",
+            team: item.team || item.organizerTeam || "",
+            key: item.key || "",
+            value: item.value || "",
+            email: item.email || "",
+            graduationNote: item.graduationNote || "",
+            githubUrl: item.githubUrl || "",
+            projects: item.projects ? item.projects.join(', ') : ""
         });
         setModalOpen(true);
     };
 
-    const resetForm = () => {
-        setFormData({
-            title: "", description: "", date: "", location: "", posterUrl: "",
-            name: "", imageUrl: "", titleMember: "", team: "",
-            key: "", value: ""
-        });
-    };
-
-    const canManageItem = (item) => {
-        if (userRole === "SuperAdmin") return true;
-        if (activeTab === "events") {
-            const itemTeam = item.organizerTeam ? item.organizerTeam.trim() : "";
-            const myTeam = userTeam ? userTeam.trim() : "";
-            return itemTeam === myTeam;
-        }
-        return activeTab === "members" || activeTab === "applications";
-    };
-
-    const TeamSelect = () => (
-        <select
-            name="team"
-            value={formData.team}
-            onChange={handleInputChange}
-            style={{ width: "100%", padding: "10px", marginBottom: "15px", borderRadius: "5px", border: "1px solid #ccc" }}
-            required
-        >
-            <option value="">Bir Takım Seçiniz...</option>
-            {teamsList.map(t => (
-                <option key={t.id} value={t.name}>{t.name}</option>
-            ))}
-        </select>
-    );
-
     return (
         <div className="admin-container">
             <div className="admin-sidebar">
-                <div className="admin-logo">KTÜN Admin</div>
-                <div className="admin-user-info">
-                    <small>Giriş Yapan:</small><br />
-                    <strong>{userRole === "SuperAdmin" ? "Genel Başkan" : userTeam}</strong>
-                </div>
+                <div className="admin-logo">Topluluk Panel</div>
                 <nav>
-                    <button className={activeTab === "events" ? "active" : ""} onClick={() => setActiveTab("events")}>📅 Etkinlikler</button>
-                    <button className={activeTab === "members" ? "active" : ""} onClick={() => setActiveTab("members")}>👥 Üyeler</button>
-                    <button className={activeTab === "applications" ? "active" : ""} onClick={() => setActiveTab("applications")}>🚀 Başvurular</button>
-
+                    <button className={activeTab === 'events' ? 'active' : ''} onClick={() => setActiveTab('events')}>📅 Etkinlikler</button>
+                    <button className={activeTab === 'projects' ? 'active' : ''} onClick={() => setActiveTab('projects')}>🚀 Projeler</button>
+                    <button className={activeTab === 'members' ? 'active' : ''} onClick={() => setActiveTab('members')}>👥 Üyeler</button>
+                    <button className={activeTab === 'applications' ? 'active' : ''} onClick={() => setActiveTab('applications')}>🚀 Başvurular</button>
                     {userRole === "SuperAdmin" && (
                         <>
-                            <button className={activeTab === "teams" ? "active" : ""} onClick={() => setActiveTab("teams")}>🏢 Takımlar</button>
-                            <button className={activeTab === "texts" ? "active" : ""} onClick={() => setActiveTab("texts")}>✍️ Site Yazıları</button>
+                            <button className={activeTab === 'teams' ? 'active' : ''} onClick={() => setActiveTab('teams')}>🏢 Takımlar</button>
+                            <button className={activeTab === 'texts' ? 'active' : ''} onClick={() => setActiveTab('texts')}>✍️ Site Yazıları</button>
                         </>
                     )}
                 </nav>
@@ -222,98 +177,48 @@ function Admin() {
 
             <div className="admin-content">
                 <div className="admin-section">
-                    <h2>
-                        {activeTab === "events" && "Etkinlik Yönetimi"}
-                        {activeTab === "members" && "Üye Yönetimi"}
-                        {activeTab === "applications" && "Gelen Başvurular"}
-                        {activeTab === "teams" && "Takım Yönetimi"}
-                        {activeTab === "texts" && "Site Yazıları"}
-                    </h2>
-
-                    {activeTab !== "texts" && activeTab !== "applications" && (
-                        <button className="add-btn" onClick={() => { setEditingItem(null); resetForm(); setModalOpen(true); }}>
-                            + Yeni Ekle
-                        </button>
-                    )}
-
+                    <div className="section-header">
+                        <h2>{activeTab.toUpperCase()}</h2>
+                        {["events", "projects", "members", "teams"].includes(activeTab) && (
+                            <button className="add-btn" onClick={() => { setEditingItem(null); resetForm(); setModalOpen(true); }}>+ Yeni Ekle</button>
+                        )}
+                    </div>
                     <table className="admin-table">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                {activeTab === "events" && <><th>Afiş</th><th>Başlık</th><th>Düzenleyen</th></>}
-                                {activeTab === "members" && <><th>Resim</th><th>İsim</th><th>Unvan</th><th>Takım</th></>}
-                                {activeTab === "applications" && <><th>Ad Soyad</th><th>Takım</th><th>Durum</th><th>İşlemler</th></>}
-                                {activeTab === "teams" && <><th>Takım Adı</th></>}
+                                {(activeTab === "events" || activeTab === "projects") && <><th>Başlık</th><th>Takım</th></>}
+                                {activeTab === "members" && <><th>İsim</th><th>Takım</th></>}
+                                {activeTab === "applications" && <><th>Ad Soyad</th><th>Detay/Proje</th><th>Durum</th></>}
                                 {activeTab === "texts" && <><th>Anahtar</th><th>Değer</th></>}
-                                {activeTab !== "applications" && <th>İşlemler</th>}
+                                {activeTab === "teams" && <th>Takım Adı</th>}
+                                <th>İşlemler</th>
                             </tr>
                         </thead>
                         <tbody>
                             {data.map((item) => (
                                 <tr key={item.id || item.key}>
                                     <td>{item.id || "#"}</td>
-
-                                    {/* --- EVENTS --- */}
-                                    {activeTab === "events" && (
-                                        <>
-                                            <td>{item.posterUrl ? <img src={item.posterUrl} className="table-img" alt="" /> : "Yok"}</td>
-                                            <td>{item.title}</td>
-                                            <td><span className="badge-team">{item.organizerTeam || "Genel"}</span></td>
-                                        </>
-                                    )}
-
-                                    {/* --- MEMBERS --- */}
-                                    {activeTab === "members" && (
-                                        <>
-                                            <td><img src={item.imageUrl || ""} className="table-img" alt="" /></td>
-                                            <td>{item.name}</td>
-                                            <td>{item.title}</td>
-                                            <td>{item.team}</td>
-                                        </>
-                                    )}
-
-                                    {/* --- APPLICATIONS --- */}
+                                    {(activeTab === "events" || activeTab === "projects") && <><td>{item.title}</td><td>{item.organizerTeam || item.team}</td></>}
+                                    {activeTab === "members" && <><td>{item.name}</td><td>{item.team}</td></>}
                                     {activeTab === "applications" && (
                                         <>
                                             <td>{item.firstName} {item.lastName}</td>
-                                            <td>{item.interestedTeam}</td>
-                                            <td>
-                                                <span style={{
-                                                    padding: "5px 10px", borderRadius: "5px", color: "white", fontWeight: "bold",
-                                                    backgroundColor: item.status === "Onaylandı" ? "#2ecc71" : item.status === "Reddedildi" ? "#e74c3c" : "#f1c40f"
-                                                }}>{item.status}</span>
-                                            </td>
-                                            <td>
-                                                <button className="edit-btn" style={{ marginRight: "5px", backgroundColor: "#2ecc71" }} onClick={() => updateAppStatus(item.id, "Onaylandı")}>✅</button>
-                                                <button className="delete-btn" style={{ backgroundColor: "#e74c3c" }} onClick={() => updateAppStatus(item.id, "Reddedildi")}>❌</button>
-                                            </td>
+                                            <td>{item.interestedProject ? `PROJE: ${item.interestedProject}` : item.interestedTeam}</td>
+                                            <td>{item.status}</td>
                                         </>
                                     )}
-
-                                    {/* --- TEAMS --- */}
-                                    {activeTab === "teams" && (
-                                        <td><strong>{item.name}</strong></td>
-                                    )}
-
-                                    {/* --- TEXTS --- */}
-                                    {activeTab === "texts" && (
-                                        <>
-                                            <td>{item.key}</td>
-                                            <td>{item.value?.substring(0, 50)}...</td>
-                                        </>
-                                    )}
-
-                                    {/* İŞLEMLER BUTONU */}
-                                    {activeTab !== "applications" && (
-                                        <td>
-                                            {canManageItem(item) ? (
-                                                <>
-                                                    {activeTab !== "teams" && <button className="edit-btn" onClick={() => handleEdit(item)}>Düzenle</button>}
-                                                    <button className="delete-btn" onClick={() => handleDelete(item.id)}>Sil</button>
-                                                </>
-                                            ) : <span style={{ fontSize: "0.8rem", color: "#999" }}>Yetkisiz</span>}
-                                        </td>
-                                    )}
+                                    {activeTab === "texts" && <><td>{item.key}</td><td>{item.value?.substring(0, 30)}...</td></>}
+                                    {activeTab === "teams" && <td>{item.name}</td>}
+                                    <td>
+                                        {activeTab === "applications" && item.interestedProject && item.status === "Pending" && (
+                                            <button onClick={() => handleApproveProject(item.id)} style={{ backgroundColor: '#2ecc71', color: 'white', marginRight: '5px' }}>Onayla</button>
+                                        )}
+                                        <button onClick={() => handleEdit(item)}>Düzenle</button>
+                                        {!["texts", "applications"].includes(activeTab) && (
+                                            <button onClick={() => { if (window.confirm("Silinsin mi?")) axios.delete(`${BASE_URL}/api/${activeTab}/${item.id}`, getAuthHeader()).then(() => fetchData()) }}>Sil</button>
+                                        )}
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
@@ -326,45 +231,51 @@ function Admin() {
                     <div className="modal-content">
                         <h3>{editingItem ? "Düzenle" : "Yeni Ekle"}</h3>
                         <form onSubmit={handleSubmit}>
-
                             {activeTab === "events" && (
                                 <>
                                     <input type="text" name="title" placeholder="Başlık" value={formData.title} onChange={handleInputChange} required />
-                                    <textarea name="description" placeholder="Açıklama" value={formData.description} onChange={handleInputChange} required rows="3"></textarea>
+                                    <textarea name="description" placeholder="Açıklama" value={formData.description} onChange={handleInputChange} required />
                                     <input type="datetime-local" name="date" value={formData.date} onChange={handleInputChange} required />
-                                    <input type="text" name="location" placeholder="Konum" value={formData.location} onChange={handleInputChange} required />
+                                    <input type="text" name="location" placeholder="Mekan" value={formData.location} onChange={handleInputChange} required />
                                     <input type="text" name="posterUrl" placeholder="Afiş URL" value={formData.posterUrl} onChange={handleInputChange} />
-                                    <label>Düzenleyen:</label>
-                                    {userRole === "SuperAdmin" ? <TeamSelect /> : <input type="text" value={userTeam} disabled style={{ background: "#eee" }} />}
+                                    <TeamSelect teamsList={teamsList} value={formData.team} onChange={handleInputChange} />
                                 </>
                             )}
-
+                            {activeTab === "projects" && (
+                                <>
+                                    <input type="text" name="title" placeholder="Proje Başlığı" value={formData.title} onChange={handleInputChange} required />
+                                    <textarea name="description" placeholder="Proje Açıklaması" value={formData.description} onChange={handleInputChange} required />
+                                    <input type="text" name="imageUrl" placeholder="Proje Kapak Resmi URL" value={formData.imageUrl} onChange={handleInputChange} />
+                                    <input type="text" name="githubUrl" placeholder="GitHub Linki" value={formData.githubUrl} onChange={handleInputChange} />
+                                    <TeamSelect teamsList={teamsList} value={formData.team} onChange={handleInputChange} />
+                                </>
+                            )}
                             {activeTab === "members" && (
                                 <>
                                     <input type="text" name="name" placeholder="Ad Soyad" value={formData.name} onChange={handleInputChange} required />
                                     <input type="text" name="titleMember" placeholder="Unvan" value={formData.titleMember} onChange={handleInputChange} required />
-                                    <label>Takım:</label>
-                                    {userRole === "SuperAdmin" ? <TeamSelect /> : <input type="text" value={userTeam} disabled style={{ background: "#eee" }} />}
                                     <input type="text" name="imageUrl" placeholder="Resim URL" value={formData.imageUrl} onChange={handleInputChange} />
+                                    <TeamSelect teamsList={teamsList} value={formData.team} onChange={handleInputChange} />
+                                    {formData.team === "Mezunlarımız" && (
+                                        <>
+                                            <textarea name="graduationNote" placeholder="Mezuniyet Notu" value={formData.graduationNote} onChange={handleInputChange} rows="3" />
+                                            <input type="text" name="projects" placeholder="Projeler (Virgül ile)" value={formData.projects} onChange={handleInputChange} />
+                                        </>
+                                    )}
                                 </>
                             )}
-
-                            {activeTab === "teams" && (
-                                <>
-                                    <label>Yeni Takım Adı:</label>
-                                    <input type="text" name="name" placeholder="Örn: Yapay Zeka Ekibi" value={formData.name} onChange={handleInputChange} required />
-                                </>
-                            )}
-
                             {activeTab === "texts" && (
                                 <>
-                                    <input type="text" value={formData.key} disabled style={{ background: "#eee" }} />
-                                    <textarea name="value" value={formData.value} onChange={handleInputChange} rows="5"></textarea>
+                                    <input type="text" value={formData.key} disabled />
+                                    <textarea name="value" value={formData.value} onChange={handleInputChange} rows="8" />
                                 </>
                             )}
+                            {activeTab === "teams" && <input type="text" name="name" placeholder="Takım Adı" value={formData.name} onChange={handleInputChange} required />}
 
-                            <button type="submit" className="save-btn">{editingItem ? "Güncelle" : "Kaydet"}</button>
-                            <button type="button" className="close-btn" onClick={() => setModalOpen(false)}>İptal</button>
+                            <div className="modal-buttons">
+                                <button type="submit">Kaydet</button>
+                                <button type="button" onClick={() => { setModalOpen(false); resetForm(); }}>İptal</button>
+                            </div>
                         </form>
                     </div>
                 </div>

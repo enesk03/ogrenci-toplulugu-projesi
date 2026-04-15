@@ -20,5 +20,7 @@ namespace StudentCommunity.Api.Entities
 
         public string Status { get; set; } = "Beklemede"; // Beklemede, Onaylandı, Reddedildi
         public DateTime AppliedAt { get; set; } = DateTime.Now;
+
+        public string? InterestedProject { get; set; } 
     }
 }

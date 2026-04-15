@@ -4,20 +4,16 @@ import "./Members.css";
 
 function Members() {
     const [groupedMembers, setGroupedMembers] = useState({});
-    const BASE_URL = "https://localhost:7060";
+    const BASE_URL = "http://localhost:7060";
 
-    const groupMembersByTeam = (members) => {
+    const processMembers = (members) => {
         const groups = {};
-
-        // 1. Önce "Yönetim Kurulu" veya Takımsızları ayır
         const topTeamName = "Yönetim Kurulu";
+
         groups[topTeamName] = [];
 
         members.forEach((member) => {
-            // Eğer takımı yoksa veya boşsa 'Yönetim Kurulu' varsayalım
             let teamName = member.team && member.team.trim() !== "" ? member.team : topTeamName;
-
-            // Grubu oluştur
             if (!groups[teamName]) {
                 groups[teamName] = [];
             }
@@ -27,16 +23,15 @@ function Members() {
         setGroupedMembers(groups);
     };
 
-    // Şimdi useEffect güvenle çalışabilir
     useEffect(() => {
         axios.get(`${BASE_URL}/api/members`)
             .then((res) => {
                 const data = res.data.data ? res.data.data : res.data;
-                groupMembersByTeam(data);
+                console.log("DB'den Gelen Ham Veri:", data[0]);
+                processMembers(data);
             })
             .catch((err) => console.error("Üyeler çekilemedi:", err));
-
-    }, []);
+    }, []); 
 
     return (
         <div className="members-page">
@@ -45,22 +40,15 @@ function Members() {
                 <p>Topluluğumuza değer katan ekiplerimiz ve üyelerimiz.</p>
             </div>
 
-            {/* GRUPLARI LİSTELE */}
             {Object.keys(groupedMembers).map((teamName) => (
-
-                // Eğer o takımda üye yoksa gösterme
                 groupedMembers[teamName].length > 0 && (
-                    <div key={teamName} className="team-section">
-
-                        {/* TAKIM BAŞLIĞI */}
+                    <div key={teamName} className={`team-section ${teamName === "Mezunlarımız" ? "alumni-section" : ""}`}>
                         <h2 className="team-title">{teamName}</h2>
                         <div className="team-divider"></div>
 
-                        {/* O TAKIMIN ÜYELERİ (GRID) */}
                         <div className="members-grid">
                             {groupedMembers[teamName].map((member) => (
-                                <div key={member.id} className="member-card">
-
+                                <div key={member.id} className={`member-card ${teamName === "Mezunlarımız" ? "alumni-card" : ""}`}>
                                     <div className="member-image-wrapper">
                                         <img
                                             src={member.imageUrl}
@@ -69,12 +57,25 @@ function Members() {
                                             onError={(e) => { e.target.src = "https://cdn-icons-png.flaticon.com/512/3135/3135715.png" }}
                                         />
                                     </div>
-
                                     <div className="member-info">
                                         <h3>{member.name}</h3>
                                         <span className="member-title">{member.title}</span>
-                                    </div>
 
+                                        {teamName === "Mezunlarımız" && (
+                                            <>
+                                                {member.graduationNote && (
+                                                    <p className="alumni-note">"{member.graduationNote}"</p>
+                                                )}
+                                                {member.projects && member.projects.length > 0 && (
+                                                    <div className="project-list">
+                                                        {member.projects.map((p, idx) => (
+                                                            <span key={idx} className="project-badge">{p}</span>
+                                                        ))}
+                                                    </div>
+                                                )}
+                                            </>
+                                        )}
+                                    </div>
                                 </div>
                             ))}
                         </div>

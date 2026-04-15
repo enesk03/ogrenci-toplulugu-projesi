@@ -12,7 +12,7 @@ import Contact from "./pages/Contact";
 import Members from "./pages/Members";
 import Login from "./pages/Login";
 import Admin from "./pages/Admin";
-
+import ProjectDetail from "./pages/ProjectDetail";
 import Apply from "./pages/Apply";
 
 function App() {
@@ -38,6 +38,8 @@ function App() {
 
                 <Route path="/login" element={<Login />} />
                 <Route path="/admin" element={<Admin />} />
+                <Route path="/projeler/:id" element={<ProjectDetail />} />
+
             </Routes>
 
             <Footer />

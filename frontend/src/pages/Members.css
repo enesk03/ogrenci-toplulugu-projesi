@@ -27,16 +27,16 @@
         font-size: 1.1rem;
     }
 
-/* --- IZGARA YAPISI--- */
+/* --- IZGARA YAPISI --- */
 .members-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* --- ÜYE KARTI --- */
+/* --- ÜYE KARTI (GENEL) --- */
 .member-card {
     background: #ffffff;
     padding: 40px 20px;
@@ -47,29 +47,32 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
     .member-card:hover {
-        transform: translateY(-10px); /* Hafif yukarı kalksın */
-        box-shadow: 0 15px 30px rgba(181, 37, 37, 0.15); /* Kırmızı gölge */
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(181, 37, 37, 0.15);
         border-color: #B52525;
     }
 
 .member-image-wrapper {
-    width: 150px; /* Genişlik Sabit */
-    height: 150px; /* Yükseklik Sabit */
-    margin: 0 auto 20px; /* Ortala ve alttan boşluk bırak */
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
     position: relative;
 }
 
 .member-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Resmi ezmeden, kutuya doldur */
-    object-position: top center; 
-    border-radius: 50%; /* Tam yuvarlak yap */
-    border: 4px solid #B52525; 
-    padding: 3px; 
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    border: 4px solid #B52525;
+    padding: 3px;
     background-color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -83,7 +86,7 @@
 }
 
 .member-title {
-    color: #B52525; /* Unvan Kırmızı */
+    color: #B52525;
     font-size: 0.95rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -91,35 +94,16 @@
     display: block;
 }
 
-/* Süsleme (Opsiyonel: Kartın üstüne ince çizgi) */
-.member-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background-color: #B52525;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.member-card:hover::after {
-    transform: scaleX(1); /* Hover olunca çizgi görünsün */
-}
-
-/* ... Eski kodlar kalsın ... */
-
 /* --- TAKIM BÖLÜMÜ --- */
 .team-section {
     max-width: 1200px;
-    margin: 0 auto 80px; /* Takımlar arası boşluk */
+    margin: 0 auto 80px;
 }
 
 .team-title {
     color: #333;
     font-size: 2rem;
-    text-align: center; /* Sola yaslı istersen 'left' yap */
+    text-align: center;
     margin-bottom: 10px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -129,7 +113,84 @@
 .team-divider {
     width: 60px;
     height: 4px;
-    background-color: #B52525; /* KTÜN Kırmızısı */
-    margin: 0 auto 40px; /* Ortala ve alttan boşluk bırak */
+    background-color: #B52525;
+    margin: 0 auto 40px;
     border-radius: 2px;
 }
+
+/* =========================
+   MEZUNLAR ÖZEL STİLLERİ
+========================= */
+
+/* Mezun Bölümü Konteynırı */
+.alumni-section {
+    background-color: #f0f0f0; /* Mezunları hafif farklı fonda ayırıyoruz */
+    padding: 50px 0;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+/* Mezun Kartı Farklılaştırma */
+.alumni-card {
+    border: 1px solid #d1d1d1;
+    background: linear-gradient(145deg, #ffffff, #f5f5f5);
+}
+
+    .alumni-card .member-image {
+        border-color: #777; /* Mezunların çerçevesi daha ağırbaşlı gri */
+    }
+
+    .alumni-card .member-title {
+        color: #555; /* Mezunların unvan rengi */
+    }
+
+/* Mezuniyet Notu (WhatsApp'tan gelen yorum) */
+.alumni-note {
+    margin-top: 15px;
+    padding: 10px;
+    font-style: italic;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    position: relative;
+    background: rgba(181, 37, 37, 0.05); /* Çok hafif bordo fon */
+    border-radius: 8px;
+}
+
+/* Proje Listesi ve Badge'ler */
+.alumni-projects {
+    margin-top: 15px;
+    width: 100%;
+}
+
+    .alumni-projects strong {
+        font-size: 0.8rem;
+        color: #888;
+        display: block;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+    }
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+}
+
+.project-badge {
+    background-color: #eee;
+    color: #444;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    transition: all 0.2s ease;
+}
+
+    .project-badge:hover {
+        background-color: #B52525;
+        color: white;
+        border-color: #B52525;
+    }

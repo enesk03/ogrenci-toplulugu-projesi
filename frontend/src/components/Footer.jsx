@@ -5,7 +5,7 @@ import "./Footer.css";
 
 function Footer() {
     const [texts, setTexts] = useState([]);
-    const BASE_URL = "https://localhost:7060";
+    const BASE_URL = "http://localhost:7060";
 
     useEffect(() => {
         axios.get(`${BASE_URL}/api/sitetexts`)

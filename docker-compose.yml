@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: topluluk_db_container
+    restart: always
+    environment:
+      MYSQL_DATABASE: topluluk_db
+      MYSQL_ROOT_PASSWORD: "12211221ee"
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - topluluk_network
+
+  backend:
+    build:
+      context: ./backend/StudentCommunity.Api
+      dockerfile: Dockerfile
+    container_name: topluluk_backend_container
+    depends_on:
+      - db
+    ports:
+      - "7060:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=db;Database=topluluk_db;Uid=root;Pwd=12211221ee;CharSet=utf8mb4;
+      - Jwt__Key=KonyaTeknikUniversitesi__Cok_Gizli_Anahtar_123456789
+      - ASPNETCORE_URLS=http://+:8080
+    networks:
+      - topluluk_network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - REACT_APP_API_URL=http://localhost:7060/api
+    container_name: topluluk_frontend_container
+    environment:
+      - REACT_APP_API_URL=http://localhost:7060/api
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - topluluk_network
+
+volumes:
+  db_data:
+
+networks:
+  topluluk_network:
+    driver: bridge

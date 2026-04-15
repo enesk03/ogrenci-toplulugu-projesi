@@ -6,7 +6,7 @@ import "./Home.css";
 function Home() {
     const [texts, setTexts] = useState([]);
     // Eğer backend farklı porttaysa burayı güncelle
-    const BASE_URL = "https://localhost:7060";
+    const BASE_URL = "http://localhost:7060";
 
     useEffect(() => {
         axios.get(`${BASE_URL}/api/sitetexts`)
