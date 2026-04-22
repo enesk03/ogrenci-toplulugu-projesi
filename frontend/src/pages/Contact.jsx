@@ -1,5 +1,5 @@
 ﻿import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../api/axios";
 import "./Contact.css";
 
 function Contact() {
@@ -8,12 +8,10 @@ function Contact() {
         instagram: "..."
     });
 
-    const BASE_URL = "http://localhost:7060";
-
     useEffect(() => {
-        axios.get(`${BASE_URL}/api/sitetexts`)
+        api.get("/sitetexts")
             .then((res) => {
-                const texts = res.data.data;
+                const texts = res.data.data ? res.data.data : res.data;
 
                 const emailObj = texts.find(t => t.key === 'contact.email');
                 const instaObj = texts.find(t => t.key === 'contact.instagram');
@@ -30,7 +28,6 @@ function Contact() {
         <div className="contact-page">
             <div className="contact-container">
 
-                {/* SOL TARAF - KTÜN Renkleri */}
                 <div className="contact-info">
                     <h1>İletişime Geç</h1>
 
@@ -55,7 +52,6 @@ function Contact() {
                     </div>
                 </div>
 
-                {/* SAĞ TARAF - Form */}
                 <div className="contact-form">
                     <input type="text" placeholder="Adınız Soyadınız" />
                     <input type="email" placeholder="E-posta Adresiniz" />

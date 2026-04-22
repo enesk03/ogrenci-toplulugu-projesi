@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using StudentCommunity.Api.Data;
 using StudentCommunity.Api.Entities;
 
-[Route("api/[controller]")]
+[Route("api/projeler")]
 [ApiController]
 public class ProjectsController : ControllerBase
 {
@@ -11,14 +11,26 @@ public class ProjectsController : ControllerBase
     public ProjectsController(AppDbContext context) { _context = context; }
 
     [HttpGet]
-    public async Task<IActionResult> Get() => Ok(await _context.Projects.ToListAsync());
+    public async Task<IActionResult> Get()
+    {
+        var projects = await _context.Projects.ToListAsync();
+        return Ok(new { data = projects });
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> Get(int id)
+    {
+        var project = await _context.Projects.FindAsync(id);
+        if (project == null) return NotFound();
+        return Ok(new { data = project });
+    }
 
     [HttpPost]
     public async Task<IActionResult> Create(Project project)
     {
         _context.Projects.Add(project);
         await _context.SaveChangesAsync();
-        return Ok(project);
+        return Ok(new { data = project });
     }
 
     [HttpPut("{id}")]
@@ -39,14 +51,4 @@ public class ProjectsController : ControllerBase
         await _context.SaveChangesAsync();
         return Ok();
     }
-
-    [HttpGet("{id}")]
-    public async Task<IActionResult> Get(int id)
-    {
-        var project = await _context.Projects.FindAsync(id);
-        if (project == null) return NotFound();
-
-        return Ok(new { data = project });
-    }
-
 }

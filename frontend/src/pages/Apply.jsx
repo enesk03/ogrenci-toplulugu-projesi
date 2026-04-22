@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "axios";
+import api from "../api/axios";
 import "./Contact.css";
 
 function Apply() {
@@ -9,10 +9,9 @@ function Apply() {
     });
 
     const [teams, setTeams] = useState([]);
-    const BASE_URL = "http://localhost:7060";
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/api/teams`)
+        api.get("/teams")
             .then(res => {
                 const data = res.data.data ? res.data.data : res.data;
                 setTeams(data);
@@ -27,13 +26,15 @@ function Apply() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post(`${BASE_URL}/api/applications`, formData);
+            await api.post("/applications", formData);
             alert("Başvurunuz başarıyla alındı! 🚀");
             setFormData({
                 firstName: "", lastName: "", email: "", phone: "",
                 department: "", grade: "", interestedTeam: "", reason: ""
             });
-        } catch  { alert("Hata oluştu."); }
+        } catch {
+            alert("Hata oluştu.");
+        }
     };
 
     return (
@@ -76,4 +77,5 @@ function Apply() {
         </div>
     );
 }
+
 export default Apply;

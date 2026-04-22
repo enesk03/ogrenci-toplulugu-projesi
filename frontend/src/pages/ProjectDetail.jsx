@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
-import axios from "axios";
+import api from "../api/axios";
 import "./ProjectDetail.css";
 
 function ProjectDetail() {
@@ -8,7 +8,6 @@ function ProjectDetail() {
     const [project, setProject] = useState(null);
     const [sent, setSent] = useState(false);
     const [formData, setFormData] = useState({ firstName: "", lastName: "", email: "" });
-    const BASE_URL = "http://localhost:7060";
 
     const formatUrl = (url) => {
         if (!url) return "#";
@@ -16,7 +15,7 @@ function ProjectDetail() {
     };
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/api/projects/${id}`)
+        api.get(`/projeler/${id}`)
             .then(res => {
                 setProject(res.data.data ? res.data.data : res.data);
             })
@@ -33,7 +32,7 @@ function ProjectDetail() {
             status: "Pending"
         };
         try {
-            await axios.post(`${BASE_URL}/api/applications`, payload);
+            await api.post("/applications", payload);
             setSent(true);
         } catch {
             alert("Başvuru gönderilemedi.");
@@ -47,7 +46,7 @@ function ProjectDetail() {
             <div className="detail-card">
                 <div className="detail-image-box">
                     <img
-                        src={project.imageUrl}
+                        src={project.imageUrl || "/default-project.png"}
                         alt={project.title}
                         className="detail-page-image"
                     />
@@ -105,7 +104,7 @@ function ProjectDetail() {
                     </div>
 
                     <div className="detail-actions">
-                        <Link to="/etkinlikler" className="detail-back-btn">← Geri Dön</Link>
+                        <Link to="/projeler" className="detail-back-btn">← Geri Dön</Link>
                         {project.githubUrl && (
                             <a
                                 href={formatUrl(project.githubUrl)}

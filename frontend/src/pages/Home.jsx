@@ -1,17 +1,14 @@
 ﻿import { useEffect, useState } from "react";
-import axios from "axios";
-import HeroSlider from "../components/HeroSlider"; // 🔥 UNUTMA: Bunu import etmelisin!
+import api from "../api/axios";
+import HeroSlider from "../components/HeroSlider";
 import "./Home.css";
 
 function Home() {
     const [texts, setTexts] = useState([]);
-    // Eğer backend farklı porttaysa burayı güncelle
-    const BASE_URL = "http://localhost:7060";
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/api/sitetexts`)
+        api.get("/sitetexts")
             .then((res) => {
-                // Backend yapına göre res.data veya res.data.data olabilir, kontrol et
                 setTexts(res.data.data ? res.data.data : res.data);
             })
             .catch((err) => console.error("Site yazıları çekilemedi:", err));
@@ -25,13 +22,9 @@ function Home() {
 
     return (
         <div className="main-wrapper">
-            {/* 1. SLIDER EN ÜSTTE (Sayfa genişliğinin %80'i) */}
             <HeroSlider />
 
-            {/* 2. DİĞER İÇERİKLER */}
             <div className="home">
-
-                {/* Eski Hero (Yazı Başlığı) - Slider olduğu için burayı biraz sadeleştirebilirsin */}
                 <section className="hero">
                     <h1>{getText('home.hero.title')}</h1>
                     <p>{getText('home.hero.subtitle')}</p>
@@ -62,7 +55,6 @@ function Home() {
                 <section className="quote">
                     <p>“{getText('home.quote')}”</p>
                 </section>
-
             </div>
         </div>
     );

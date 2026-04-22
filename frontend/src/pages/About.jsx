@@ -1,13 +1,12 @@
 ﻿import { useEffect, useState } from "react";
-import axios from "axios";
 import "./About.css";
+import api from "../api/axios";
 
 function About() {
     const [texts, setTexts] = useState({});
-    const BASE_URL = "http://localhost:7060";
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/api/sitetexts`)
+        api.get("/sitetexts")
             .then((res) => {
                 const textObj = {};
                 const dataList = res.data.data ? res.data.data : res.data;
@@ -46,4 +45,5 @@ function About() {
         </div>
     );
 }
+
 export default About;

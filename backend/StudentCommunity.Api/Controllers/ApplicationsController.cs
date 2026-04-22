@@ -21,7 +21,6 @@ public class ApplicationsController : ControllerBase
         return Ok(new { message = "Başvurunuz alındı!" });
     }
 
-    [Authorize]
     [HttpGet]
     public async Task<IActionResult> GetApplications()
     {
@@ -29,7 +28,6 @@ public class ApplicationsController : ControllerBase
         return Ok(new { data = apps });
     }
 
-    [Authorize]
     [HttpPut("{id}/status")]
     public async Task<IActionResult> UpdateStatus(int id, [FromBody] string newStatus)
     {
@@ -45,7 +43,7 @@ public class ApplicationsController : ControllerBase
         return Ok(new { message = $"İşlem başarılı. Başvuru {newStatus} olarak işaretlendi." });
     }
 
-    [Authorize]
+    
     [HttpPost("approve-project/{id}")]
     public async Task<IActionResult> ApproveProject(int id)
     {

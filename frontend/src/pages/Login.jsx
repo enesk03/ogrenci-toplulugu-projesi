@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import api from "../api/axios";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
@@ -10,48 +10,36 @@ function Login() {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const BASE_URL = "http://localhost:7060";
-
     const handleLogin = async (e) => {
         e.preventDefault();
         setError("");
         setLoading(true);
 
         try {
-            // 1. İsteği gönderiyoruz
-            const response = await axios.post(`${BASE_URL}/api/auth/login`, {
+            const response = await api.post("/auth/login", {
                 username,
                 password
             });
 
-            // 2. Veriyi ayıklıyoruz (Backend'den gelen yapıya göre)
-            // AuthController'da doğrudan objeyi dönmüştük: { message, token, role, team }
             const resData = response.data;
-
             const token = resData.token;
             const role = resData.role;
             const team = resData.team;
 
-            // 3. Token kontrolü ve Saklama
             if (token) {
-                // Admin.jsx'in beklediği anahtar isimleriyle localStorage'a yazıyoruz
                 localStorage.setItem("token", token);
                 localStorage.setItem("adminRole", role || "Admin");
                 localStorage.setItem("adminTeam", team || "Genel");
 
-                console.log("✅ Giriş Başarılı! Admin paneline geçiliyor...");
                 navigate("/admin");
             } else {
                 setError("Hata: Sunucudan anahtar (token) alınamadı.");
             }
 
         } catch (err) {
-            console.error("❌ HATA:", err);
-
             if (err.code === "ERR_NETWORK") {
-                setError("Sunucuya ulaşılamıyor! Backend (7060 portu) çalışıyor mu?");
+                setError("Sunucuya ulaşılamıyor! Backend çalışıyor mu?");
             } else if (err.response) {
-                // Backend'den gelen 401 veya 400 hataları
                 setError(err.response.data.message || "Kullanıcı adı veya şifre hatalı.");
             } else {
                 setError("Beklenmedik bir hata oluştu.");
@@ -69,7 +57,6 @@ function Login() {
                     <p>KTÜN Topluluk Yönetim Paneline hoş geldiniz.</p>
                 </div>
 
-                {/* Hata Mesajı */}
                 {error && (
                     <div className="error-msg">
                         <i className="fas fa-exclamation-circle"></i> {error}

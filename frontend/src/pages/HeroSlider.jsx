@@ -1,29 +1,24 @@
 import React, { useState, useEffect } from "react";
-import "./HeroSlider.css"; 
+import api from "../api/axios"; 
+import "./HeroSlider.css";
 
 const HeroSlider = () => {
     const [current, setCurrent] = useState(0);
+    const [slides, setSlides] = useState([]);
+    const [loading, setLoading] = useState(true);
 
-    const slides = [
-        {
-            image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1920&auto=format&fit=crop",
-            title: "Geleceği Birlikte Kodluyoruz",
-            description: "Konya Teknik Üniversitesi'nin en aktif teknoloji topluluğuna hoş geldin.",
-            buttonText: "Bize Katıl"
-        },
-        {
-            image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1920&auto=format&fit=crop",
-            title: "Etkinlikler ve Workshoplar",
-            description: "Yazılım, siber güvenlik ve yapay zeka alanında kendini geliştir.",
-            buttonText: "Etkinlikleri Gör"
-        },
-        {
-            image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1920&auto=format&fit=crop",
-            title: "Büyük Bir Aile",
-            description: "Yüzlerce öğrenciyle network yap, projelerde yer al.",
-            buttonText: "İletişime Geç"
-        }
-    ];
+    useEffect(() => {
+        api.get("/sliders")
+            .then((res) => {
+                const data = res.data.data ? res.data.data : res.data;
+                setSlides(data);
+                setLoading(false);
+            })
+            .catch((err) => {
+                console.error("Slider verileri yüklenemedi:", err);
+                setLoading(false);
+            });
+    }, []);
 
     const length = slides.length;
 
@@ -36,15 +31,16 @@ const HeroSlider = () => {
     };
 
     useEffect(() => {
+        if (length === 0) return; 
+
         const timer = setTimeout(() => {
             nextSlide();
         }, 5000);
         return () => clearTimeout(timer);
-    }, [current]);
+    }, [current, length]);
 
-    if (!Array.isArray(slides) || slides.length <= 0) {
-        return null;
-    }
+    if (loading) return null; 
+    if (length <= 0) return null;
 
     return (
         <section className="hero-slider">
@@ -56,11 +52,11 @@ const HeroSlider = () => {
                     <div className={index === current ? "slide active" : "slide"} key={index}>
                         {index === current && (
                             <>
-                                <img src={slide.image} alt="Slider Resim" />
+                                <img src={slide.image || slide.imageUrl} alt="Slider" />
                                 <div className="slide-content">
                                     <h1>{slide.title}</h1>
                                     <p>{slide.description}</p>
-                                    <button className="slider-btn">{slide.buttonText}</button>
+                                    <button className="slider-btn">{slide.buttonText || "Detaylar"}</button>
                                 </div>
                             </>
                         )}
