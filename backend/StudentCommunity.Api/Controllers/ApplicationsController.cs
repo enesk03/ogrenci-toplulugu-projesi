@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using StudentCommunity.Api.Data;
 using StudentCommunity.Api.Entities;
@@ -53,14 +53,20 @@ public class ApplicationsController : ControllerBase
         var fullName = $"{app.FirstName} {app.LastName}";
         var member = await _context.Members.FirstOrDefaultAsync(m => m.Name == fullName && m.Email == app.Email);
 
-        if (member != null && !string.IsNullOrEmpty(app.InterestedProject))
+       if (member != null && !string.IsNullOrEmpty(app.InterestedProject))
+{
+    var project = await _context.Projects
+        .FirstOrDefaultAsync(p => p.Title == app.InterestedProject);
+
+    if (project != null)
+    {
+        if (!member.Projects.Any(p => p.Id == project.Id))
         {
-            if (!member.Projects.Contains(app.InterestedProject))
-            {
-                member.Projects.Add(app.InterestedProject);
-                _context.Entry(member).State = EntityState.Modified;
-            }
+            member.Projects.Add(project);
+            _context.Entry(member).State = EntityState.Modified;
         }
+    }
+}
 
         app.Status = "Approved"; 
         await _context.SaveChangesAsync();

@@ -24,12 +24,12 @@ namespace StudentCommunity.Api.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<Member>()
+          /*  modelBuilder.Entity<Member>()
                 .Property(e => e.Projects)
                 .HasConversion(
                     v => string.Join(',', v),
                     v => v.Split(',', StringSplitOptions.RemoveEmptyEntries).ToList()
-                );
+                );*/
         }
     }
 }

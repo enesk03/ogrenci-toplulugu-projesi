@@ -12,8 +12,9 @@
         public bool IsGraduated { get; set; } = false;
         public string? GraduationNote { get; set; }
         public string? ContactInfo { get; set; }
-        public List<string> Projects { get; set; } = new();
+       // public List<string> Projects { get; set; } = new();
         private DateTime _createdAt = DateTime.Now;
+        public ICollection<Project> Projects { get; set; } = new List<Project>();
         public DateTime CreatedAt
         {
             get => _createdAt;

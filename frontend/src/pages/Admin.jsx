@@ -2,6 +2,7 @@
 import api from "../api/axios";
 import "./Admin.css";
 
+// Takım Seçimi İçin Yardımcı Bileşen
 const TeamSelect = ({ teamsList, value, onChange }) => (
     <select name="team" value={value} onChange={onChange} className="admin-select" required>
         <option value="">Bir Takım Seçiniz...</option>
@@ -11,37 +12,58 @@ const TeamSelect = ({ teamsList, value, onChange }) => (
     </select>
 );
 
+const endpointMap = {
+    projects: "/projeler",
+    members: "/members",
+    texts: "/sitetexts",
+    applications: "/applications",
+    teams: "/teams"
+};
+
 function Admin() {
     const [activeTab, setActiveTab] = useState("projects");
     const [data, setData] = useState([]);
     const [teamsList, setTeamsList] = useState([]);
+    const [allMembers, setAllMembers] = useState([]); 
     const [modalOpen, setModalOpen] = useState(false);
     const [editingItem, setEditingItem] = useState(null);
 
     const userRole = localStorage.getItem("adminRole");
     const userTeam = localStorage.getItem("adminTeam");
+    
+    // Senin yüklediğin default avatar dosya adı
+    const defaultAvatar = "/default-avatar-profile-icon-social-600nw-1906669723.webp";
 
     const [formData, setFormData] = useState({
         title: "", description: "", name: "", imageUrl: "", titleMember: "", team: "", key: "", value: "",
         email: "", graduationNote: "", contactInfo: "", projects: "", githubUrl: "",
-        category: "Diğer"
+        category: "Diğer",
+        projectMembers: [] 
     });
 
     const resetForm = () => {
         setFormData({
             title: "", description: "", name: "", imageUrl: "", titleMember: "", team: "", key: "", value: "",
             email: "", graduationNote: "", contactInfo: "", projects: "", githubUrl: "",
-            category: "Diğer"
+            category: "Diğer",
+            projectMembers: []
         });
     };
 
+    const handleAuthError = (err) => {
+        if (err.response?.status === 401) {
+            alert("Oturum süresi doldu. Lütfen tekrar giriş yapın.");
+            localStorage.clear();
+            window.location.href = "/login";
+        } else {
+            console.error(err);
+            alert("Bir işlem hatası oluştu.");
+        }
+    };
+
     const fetchData = () => {
-        let endpoint = "";
-        if (activeTab === "projects") endpoint = "/projeler";
-        else if (activeTab === "members") endpoint = "/members";
-        else if (activeTab === "texts") endpoint = "/sitetexts";
-        else if (activeTab === "applications") endpoint = "/applications";
-        else if (activeTab === "teams") endpoint = "/teams";
+        const endpoint = endpointMap[activeTab];
+        if (!endpoint) return;
 
         api.get(endpoint)
             .then((res) => {
@@ -52,31 +74,30 @@ function Admin() {
                 }
                 setData(Array.isArray(incomingData) ? incomingData : [incomingData]);
             })
-            .catch((err) => { if (err.response?.status === 401) window.location.href = "/login"; });
+            .catch(handleAuthError);
     };
 
     useEffect(() => {
-        api.get("/teams")
-            .then(res => setTeamsList(res.data.data ? res.data.data : res.data))
-            .catch(err => console.error(err));
+        api.get("/teams").then(res => setTeamsList(res.data.data || res.data));
+        api.get("/members").then(res => setAllMembers(res.data.data || res.data));
     }, []);
 
     useEffect(() => { fetchData(); }, [activeTab]);
 
     const handleInputChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const handleLogout = () => {
-        localStorage.clear();
-        window.location.href = "/login";
+    // Çoklu üye seçimini yöneten fonksiyon
+    const handleMemberSelect = (e) => {
+        const selected = Array.from(e.target.selectedOptions, option => option.value);
+        setFormData({ ...formData, projectMembers: selected });
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        let endpoint = "";
+        const endpoint = endpointMap[activeTab];
         let payload = {};
 
         if (activeTab === "projects") {
-            endpoint = "/projeler";
             payload = {
                 id: editingItem ? editingItem.id : 0,
                 title: formData.title,
@@ -84,11 +105,11 @@ function Admin() {
                 imageUrl: formData.imageUrl,
                 githubUrl: formData.githubUrl,
                 team: formData.team || "Genel",
-                category: formData.category
+                category: formData.category,
+                projectMembers: formData.projectMembers 
             };
         } else if (activeTab === "members") {
-            endpoint = "/members";
-            const projectsArray = formData.projects ? formData.projects.split(',').map(p => p.trim()).filter(p => p !== "") : [];
+            const projectsArray = formData.projects ? formData.projects.split(',').map(p => p.trim()) : [];
             payload = {
                 id: editingItem ? editingItem.id : 0,
                 name: formData.name,
@@ -102,10 +123,8 @@ function Admin() {
                 isGraduated: formData.team === "Mezunlarımız"
             };
         } else if (activeTab === "texts") {
-            endpoint = "/sitetexts";
             payload = { id: editingItem.id, key: editingItem.key, value: formData.value };
         } else if (activeTab === "teams") {
-            endpoint = "/teams";
             payload = { id: editingItem ? editingItem.id : 0, name: formData.name };
         }
 
@@ -116,20 +135,12 @@ function Admin() {
             } else {
                 await api.post(endpoint, payload);
             }
+            alert("Başarıyla kaydedildi.");
             setModalOpen(false);
             setEditingItem(null);
             resetForm();
             fetchData();
-        } catch { alert("İşlem başarısız oldu."); }
-    };
-
-    const handleApproveProject = (appId) => {
-        api.post(`/applications/approve-project/${appId}`, {})
-            .then(() => {
-                alert("Üye projeye başarıyla eklendi!");
-                fetchData();
-            })
-            .catch(() => alert("Hata oluştu."));
+        } catch (err) { handleAuthError(err); }
     };
 
     const handleEdit = (item) => {
@@ -148,7 +159,8 @@ function Admin() {
             contactInfo: item.contactInfo || "",
             githubUrl: item.githubUrl || "",
             category: item.category || "Diğer",
-            projects: item.projects ? item.projects.join(', ') : ""
+            projects: item.projects ? item.projects.join(', ') : "",
+            projectMembers: item.projectMembers || []
         });
         setModalOpen(true);
     };
@@ -176,7 +188,7 @@ function Admin() {
                         <span className="user-team-badge">{userTeam || "Genel Yönetim"}</span>
                         <span className="user-role-text">{userRole}</span>
                     </div>
-                    <button className="logout-btn-top" onClick={handleLogout}>Çıkış Yap 🚪</button>
+                    <button className="logout-btn-top" onClick={() => { localStorage.clear(); window.location.href = "/login"; }}>Çıkış Yap 🚪</button>
                 </div>
 
                 <div className="admin-section">
@@ -190,10 +202,9 @@ function Admin() {
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                {activeTab === "projects" && <><th>Başlık</th><th>Takım</th><th>Kategori</th></>}
-                                {activeTab === "members" && <><th>İsim</th><th>Takım</th></>}
-                                {activeTab === "applications" && <><th>Ad Soyad</th><th>Detay/Proje</th><th>Durum</th></>}
-                                {activeTab === "texts" && <><th>Anahtar</th><th>Değer</th></>}
+                                {activeTab === "projects" && <><th>Başlık</th><th>Takım</th></>}
+                                {activeTab === "members" && <><th>Görsel</th><th>İsim</th><th>Takım</th></>}
+                                {activeTab === "applications" && <><th>Ad Soyad</th><th>Durum</th></>}
                                 {activeTab === "teams" && <th>Takım Adı</th>}
                                 <th>İşlemler</th>
                             </tr>
@@ -206,29 +217,30 @@ function Admin() {
                                         <>
                                             <td>{item.title}</td>
                                             <td>{item.team}</td>
-                                            <td>{item.category}</td>
                                         </>
                                     )}
-                                    {activeTab === "members" && <><td>{item.name}</td><td>{item.team}</td></>}
-                                    {activeTab === "applications" && (
+                                    {activeTab === "members" && (
                                         <>
-                                            <td>{item.firstName} {item.lastName}</td>
-                                            <td>{item.interestedProject ? `PROJE: ${item.interestedProject}` : item.interestedTeam}</td>
-                                            <td>{item.status}</td>
+                                            <td>
+                                                <img 
+                                                    src={item.imageUrl || defaultAvatar} 
+                                                    alt="" 
+                                                    style={{ width: "40px", height: "40px", borderRadius: "50%", objectFit: "cover" }}
+                                                    onError={(e) => { e.target.src = defaultAvatar; }}
+                                                />
+                                            </td>
+                                            <td>{item.name}</td>
+                                            <td>{item.team}</td>
                                         </>
                                     )}
-                                    {activeTab === "texts" && <><td>{item.key}</td><td>{item.value?.substring(0, 30)}...</td></>}
+                                    {activeTab === "applications" && <><td>{item.firstName} {item.lastName}</td><td>{item.status}</td></>}
                                     {activeTab === "teams" && <td>{item.name}</td>}
                                     <td>
-                                        {activeTab === "applications" && item.interestedProject && item.status === "Pending" && (
-                                            <button onClick={() => handleApproveProject(item.id)} style={{ backgroundColor: '#2ecc71', color: 'white', marginRight: '5px' }}>Onayla</button>
-                                        )}
                                         <button onClick={() => handleEdit(item)}>Düzenle</button>
                                         {!["texts", "applications"].includes(activeTab) && (
                                             <button onClick={() => {
                                                 if (window.confirm("Silinsin mi?")) {
-                                                    const deleteEndpoint = activeTab === 'projects' ? '/projeler' : `/${activeTab}`;
-                                                    api.delete(`${deleteEndpoint}/${item.id}`).then(() => fetchData());
+                                                    api.delete(`${endpointMap[activeTab]}/${item.id}`).then(() => fetchData());
                                                 }
                                             }}>Sil</button>
                                         )}
@@ -248,40 +260,29 @@ function Admin() {
                             {activeTab === "projects" && (
                                 <>
                                     <input type="text" name="title" placeholder="Proje Başlığı" value={formData.title} onChange={handleInputChange} required />
-                                    <select name="category" value={formData.category} onChange={handleInputChange} className="admin-select" required>
-                                        <option value="Tübitak">Tübitak Projesi</option>
-                                        <option value="Teknolab">Teknolab Projesi</option>
-                                        <option value="Diğer">Diğer Projeler</option>
-                                    </select>
-                                    <textarea name="description" placeholder="Proje Açıklaması" value={formData.description} onChange={handleInputChange} required />
-                                    <input type="text" name="imageUrl" placeholder="Proje Kapak Resmi URL" value={formData.imageUrl} onChange={handleInputChange} />
-                                    <input type="text" name="githubUrl" placeholder="GitHub Linki" value={formData.githubUrl} onChange={handleInputChange} />
+                                    <textarea name="description" placeholder="Açıklama" value={formData.description} onChange={handleInputChange} required />
                                     <TeamSelect teamsList={teamsList} value={formData.team} onChange={handleInputChange} />
+                                    
+                                    <div className="member-selection" style={{ marginTop: "10px" }}>
+                                        <label style={{ fontSize: "12px", color: "#666" }}>Ekip Üyelerini Seç (Ctrl ile çoklu seçim):</label>
+                                        <select multiple className="admin-select" value={formData.projectMembers} onChange={handleMemberSelect} style={{ height: "100px" }}>
+                                            {allMembers.map(m => (
+                                                <option key={m.id} value={m.name}>{m.name}</option>
+                                            ))}
+                                        </select>
+                                    </div>
+                                    <input type="text" name="githubUrl" placeholder="GitHub Linki" value={formData.githubUrl} onChange={handleInputChange} />
+                                    <input type="text" name="imageUrl" placeholder="Resim URL" value={formData.imageUrl} onChange={handleInputChange} />
                                 </>
                             )}
                             {activeTab === "members" && (
                                 <>
                                     <input type="text" name="name" placeholder="Ad Soyad" value={formData.name} onChange={handleInputChange} required />
-                                    <input type="text" name="titleMember" placeholder={formData.team === "Mezunlarımız" ? "İş Unvanı (Örn: İş Bankası Yazılım)" : "Unvan"} value={formData.titleMember} onChange={handleInputChange} required />
+                                    <input type="text" name="titleMember" placeholder="Unvan" value={formData.titleMember} onChange={handleInputChange} required />
                                     <input type="text" name="imageUrl" placeholder="Resim URL" value={formData.imageUrl} onChange={handleInputChange} />
                                     <TeamSelect teamsList={teamsList} value={formData.team} onChange={handleInputChange} />
-                                    {formData.team === "Mezunlarımız" && (
-                                        <>
-                                            <textarea name="graduationNote" placeholder="Mezuniyet Yorumu / Notu" value={formData.graduationNote} onChange={handleInputChange} rows="3" />
-                                            <input type="text" name="contactInfo" placeholder="İletişim (LinkedIn vb.)" value={formData.contactInfo} onChange={handleInputChange} />
-                                        </>
-                                    )}
-                                    <input type="text" name="projects" placeholder="Katıldığı Projeler (Virgül ile)" value={formData.projects} onChange={handleInputChange} />
                                 </>
                             )}
-                            {activeTab === "texts" && (
-                                <>
-                                    <input type="text" value={formData.key} disabled />
-                                    <textarea name="value" value={formData.value} onChange={handleInputChange} rows="8" />
-                                </>
-                            )}
-                            {activeTab === "teams" && <input type="text" name="name" placeholder="Takım Adı" value={formData.name} onChange={handleInputChange} required />}
-
                             <div className="modal-buttons">
                                 <button type="submit">Kaydet</button>
                                 <button type="button" onClick={() => { setModalOpen(false); resetForm(); }}>İptal</button>

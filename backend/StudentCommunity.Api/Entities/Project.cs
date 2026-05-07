@@ -8,6 +8,8 @@ namespace StudentCommunity.Api.Entities
         public string? ImageUrl { get; set; }
         public string? GithubUrl { get; set; }
         public string? Team { get; set; }
-        public string Category { get; set; } = "Diðer";
+        public string Category { get; set; } = "Diï¿½er";
+        public ICollection<Member> Members { get; set; } = new List<Member>();
+        
     }
 }

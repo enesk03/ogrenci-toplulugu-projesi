@@ -6,8 +6,7 @@ import "./ProjectDetail.css";
 function ProjectDetail() {
     const { id } = useParams();
     const [project, setProject] = useState(null);
-    const [sent, setSent] = useState(false);
-    const [formData, setFormData] = useState({ firstName: "", lastName: "", email: "" });
+    const defaultAvatar = "/default-avatar-profile-icon-social-600nw-1906669723.webp";
 
     const formatUrl = (url) => {
         if (!url) return "#";
@@ -19,25 +18,8 @@ function ProjectDetail() {
             .then(res => {
                 setProject(res.data.data ? res.data.data : res.data);
             })
-            .catch(err => console.error(err));
+            .catch(err => console.error("Proje yüklenirken hata oluştu:", err));
     }, [id]);
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const payload = {
-            firstName: formData.firstName,
-            lastName: formData.lastName,
-            email: formData.email,
-            interestedProject: project.title,
-            status: "Pending"
-        };
-        try {
-            await api.post("/applications", payload);
-            setSent(true);
-        } catch {
-            alert("Başvuru gönderilemedi.");
-        }
-    };
 
     if (!project) return <div className="detail-page-container">Yükleniyor...</div>;
 
@@ -64,46 +46,31 @@ function ProjectDetail() {
                         {project.description}
                     </div>
 
-                    <div className="application-section">
-                        {sent ? (
-                            <div className="success-message">
-                                <h3>Başvurunuz Alındı!</h3>
-                                <p>Admin onayından sonra projeye dahil edileceksiniz.</p>
-                            </div>
-                        ) : (
-                            <div className="project-app-form">
-                                <h3>🚀 Bu Projeye Katıl</h3>
-                                <form onSubmit={handleSubmit}>
-                                    <div className="form-group">
-                                        <input
-                                            type="text"
-                                            placeholder="Adınız"
-                                            value={formData.firstName}
-                                            onChange={e => setFormData({ ...formData, firstName: e.target.value })}
-                                            required
+                    {/* Proje Ekibi Bölümü */}
+                    <div className="project-team-section" style={{ marginTop: "30px", borderTop: "1px solid #eee", paddingTop: "20px" }}>
+                        <h3 style={{ marginBottom: "20px", display: "flex", alignItems: "center", gap: "10px" }}>
+                            🚀 Proje Ekibi
+                        </h3>
+                        <div className="project-members-grid" style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
+                            {project.projectMembers && project.projectMembers.length > 0 ? (
+                                project.projectMembers.map((mName, index) => (
+                                    <div key={index} className="member-mini-card" style={{ textAlign: "center", width: "80px" }}>
+                                        <img 
+                                            src={defaultAvatar} 
+                                            alt={mName} 
+                                            style={{ width: "50px", height: "50px", borderRadius: "50%", objectFit: "cover", border: "2px solid #3498db" }}
+                                            onError={(e) => { e.target.src = defaultAvatar; }}
                                         />
-                                        <input
-                                            type="text"
-                                            placeholder="Soyadınız"
-                                            value={formData.lastName}
-                                            onChange={e => setFormData({ ...formData, lastName: e.target.value })}
-                                            required
-                                        />
+                                        <p style={{ fontSize: "11px", marginTop: "8px", fontWeight: "bold", color: "#2c3e50" }}>{mName}</p>
                                     </div>
-                                    <input
-                                        type="email"
-                                        placeholder="E-posta Adresiniz"
-                                        value={formData.email}
-                                        onChange={e => setFormData({ ...formData, email: e.target.value })}
-                                        required
-                                    />
-                                    <button type="submit" className="apply-btn">Başvuruyu Tamamla</button>
-                                </form>
-                            </div>
-                        )}
+                                ))
+                            ) : (
+                                <p style={{ color: "#95a5a6", fontStyle: "italic" }}>Bu projeye henüz ekip üyesi atanmamış.</p>
+                            )}
+                        </div>
                     </div>
 
-                    <div className="detail-actions">
+                    <div className="detail-actions" style={{ marginTop: "40px" }}>
                         <Link to="/projeler" className="detail-back-btn">← Geri Dön</Link>
                         {project.githubUrl && (
                             <a
